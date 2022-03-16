@@ -1,12 +1,16 @@
 import React from 'react';
-
-import Title from '@/components/Title';
+import { Helmet } from 'react-helmet';
+import Layout from '@/components/Layout';
 
 export default function Home() {
   return (
     <div>
-      <Title>Hello TypeScript!</Title>
-      <p>A TypeScript starter for Gatsby. Great for advanced users.</p>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
+      <Layout>
+        <p>Home</p>
+      </Layout>
     </div>
   );
 }
