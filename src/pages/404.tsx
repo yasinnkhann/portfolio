@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function NotFound() {
   return (
-    <main>
+    <div>
       <p>Sorry, page not found!</p>
-    </main>
+    </div>
   );
 }
