@@ -9,7 +9,7 @@ export default function Home() {
         <title>Home</title>
       </Helmet>
       <Layout>
-        <div className="my-[5%]">
+        <div className="my-[20%] font-[Catamaran]">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
           ullam, magnam unde earum nesciunt sequi eveniet suscipit rem alias,
           sint modi dignissimos exercitationem ducimus nisi, omnis reiciendis
