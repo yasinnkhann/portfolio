@@ -1,13 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Layout from '@/components/Layout';
 
 export default function About() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>About</title>
       </Helmet>
-      <h1>About</h1>
-    </div>
+      <Layout>
+        <div className="my-[5%]">Hey</div>
+      </Layout>
+    </>
   );
 }
