@@ -9,12 +9,12 @@ export default function Projects() {
         <title>Projects</title>
       </Helmet>
       <Layout>
-        <div className="my-[5%]">
+        <section>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio sint
           porro tempore, dolores repudiandae voluptates tenetur nostrum!
           Possimus dolorem laboriosam iure, ipsum vero, commodi, fuga sunt
           corporis unde provident omnis?
-        </div>
+        </section>
       </Layout>
     </>
   );

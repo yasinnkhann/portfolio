@@ -9,12 +9,12 @@ export default function Contact() {
         <title>Contact</title>
       </Helmet>
       <Layout>
-        <div className="my-[5%]">
+        <section className="my-[calc(2.5rem+1rem)]">
           <div>Github: github.com/yasinnkhann</div>
           <div>LinkedIn: linkedin.co/yasinnkhann</div>
           <div>Email: yasinkhan500@gmail.com</div>
           <div>Instagram: yasinnkhann</div>
-        </div>
+        </section>
       </Layout>
     </>
   );
