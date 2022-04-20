@@ -13,8 +13,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Catamaran`,
-          `limelight`,
+          'Manrope',
           `sans-serif`, // you can also specify font weights and styles
         ],
         name: `images`,

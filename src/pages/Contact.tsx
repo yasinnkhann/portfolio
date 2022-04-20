@@ -11,7 +11,7 @@ export default function Contact() {
         <title>Contact</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(2.5rem+1rem)] flex flex-col items-center">
+        <section className="mt-[calc(2.5rem+1rem)] flex flex-col items-center font-[Manrope]">
           <div className="flex justify-between my-12 items-center">
             <h4>
               Github:{` `}

@@ -9,7 +9,7 @@ export default function Home() {
         <title>Home</title>
       </Helmet>
       <Layout>
-        <section className="font-[Catamaran] mt-[calc(2.5rem+1rem)]">
+        <section className="font-[Manrope] mt-[calc(2.5rem+1rem)]">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
           ullam, magnam unde earum nesciunt sequi eveniet suscipit rem alias,
           sint modi dignissimos exercitationem ducimus nisi, omnis reiciendis
