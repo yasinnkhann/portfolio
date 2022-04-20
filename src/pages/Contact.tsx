@@ -13,7 +13,16 @@ export default function Contact() {
       <Layout>
         <section className="mt-[calc(2.5rem+1rem)] flex flex-col items-center">
           <div className="flex justify-between my-12 items-center">
-            <h4 className="">Github: github.com/yasinnkhann</h4>
+            <h4>
+              Github:{` `}
+              <a
+                href="https://github.com/yasinnkhann"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github.com/yasinnkhann
+              </a>
+            </h4>
             <div className="ml-4">
               <Link to="https://github.com/yasinnkhann" target="_blank">
                 <StaticImage
@@ -26,7 +35,16 @@ export default function Contact() {
           </div>
 
           <div className="flex justify-between my-12 items-center">
-            <h4 className="">LinkedIn: linkedin.co/yasinnkhann</h4>
+            <h4>
+              LinkedIn:{` `}
+              <a
+                href="https://www.linkedin.com/in/yasinnkhann/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                linkedin.co/yasinnkhann
+              </a>
+            </h4>
             <div className="ml-4">
               <Link
                 to="https://www.linkedin.com/in/yasinnkhann/"
@@ -42,7 +60,16 @@ export default function Contact() {
           </div>
 
           <div className="flex justify-between my-12 items-center">
-            <h4 className="">Email: yasinkhan500@gmail.com</h4>
+            <h4>
+              Email:{` `}
+              <a
+                href="mailto:yasinkhan500@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                yasinkhan500@gmail.com
+              </a>
+            </h4>
             <div className="ml-4">
               <Link to="mailto:yasinkhan500@gmail.com" target="_blank">
                 <StaticImage
@@ -55,7 +82,16 @@ export default function Contact() {
           </div>
 
           <div className="flex justify-between my-12 items-center">
-            <h4 className="">Instagram: yasinnkhann</h4>
+            <h4>
+              Instagram:{` `}
+              <a
+                href="https://www.instagram.com/yasinnkhann/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                yasinnkhann
+              </a>
+            </h4>
             <div className="ml-4">
               <Link to="https://www.instagram.com/yasinnkhann/" target="_blank">
                 <StaticImage

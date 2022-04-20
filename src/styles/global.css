@@ -30,4 +30,9 @@
   h6 {
     @apply text-sm;
   }
+
+  a {
+    @apply text-blue-500;
+    @apply underline;
+  }
 }
