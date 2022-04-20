@@ -11,13 +11,13 @@ export default function Contact() {
         <title>Contact</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(2.5rem+1rem)] flex flex-col">
-          <div className="flex justify-between mb-14">
-            <h4 className="ml-4">Github: github.com/yasinnkhann</h4>
-            <div className="mr-4">
+        <section className="mt-[calc(2.5rem+1rem)] flex flex-col items-center">
+          <div className="flex justify-between my-12 items-center">
+            <h4 className="">Github: github.com/yasinnkhann</h4>
+            <div className="ml-4">
               <Link to="https://github.com/yasinnkhann" target="_blank">
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem]"
+                  className="h-[3.125rem] w-[3.125rem] hover:scale-125"
                   src="../assets/github-svgrepo-com.svg"
                   alt="github icon"
                 />
@@ -25,15 +25,15 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex justify-between mb-14">
-            <h4 className="ml-4">LinkedIn: linkedin.co/yasinnkhann</h4>
-            <div className="mr-4">
+          <div className="flex justify-between my-12 items-center">
+            <h4 className="">LinkedIn: linkedin.co/yasinnkhann</h4>
+            <div className="ml-4">
               <Link
                 to="https://www.linkedin.com/in/yasinnkhann/"
                 target="_blank"
               >
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem]"
+                  className="h-[3.125rem] w-[3.125rem] hover:scale-125"
                   src="../assets/linkedin-svgrepo-com.svg"
                   alt="linkedin icon"
                 />
@@ -41,12 +41,12 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex justify-between mb-14">
-            <h4 className="ml-4">Email: yasinkhan500@gmail.com</h4>
-            <div className="mr-4">
+          <div className="flex justify-between my-12 items-center">
+            <h4 className="">Email: yasinkhan500@gmail.com</h4>
+            <div className="ml-4">
               <Link to="mailto:yasinkhan500@gmail.com" target="_blank">
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem]"
+                  className="h-[3.125rem] w-[3.125rem] hover:scale-125"
                   src="../assets/email-svgrepo-com.svg"
                   alt="email icon"
                 />
@@ -54,12 +54,12 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex justify-between mb-14">
-            <h4 className="ml-4">Instagram: yasinnkhann</h4>
-            <div className="mr-4">
+          <div className="flex justify-between my-12 items-center">
+            <h4 className="">Instagram: yasinnkhann</h4>
+            <div className="ml-4">
               <Link to="https://www.instagram.com/yasinnkhann/" target="_blank">
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem]"
+                  className="h-[3.125rem] w-[3.125rem] hover:scale-125"
                   src="../assets/instagram-2-1-logo-svgrepo-com.svg"
                   alt="instagram icon"
                 />
