@@ -14,7 +14,7 @@ export default function Contact() {
         <section className="mt-[calc(2.5rem+1rem)] flex flex-col">
           <div className="flex justify-between mb-14">
             <h4 className="ml-4">Github: github.com/yasinnkhann</h4>
-            <div>
+            <div className="mr-4">
               <StaticImage
                 className="h-[3.125rem] w-[3.125rem]"
                 src="../assets/github-svgrepo-com.svg"
@@ -25,7 +25,7 @@ export default function Contact() {
 
           <div className="flex justify-between mb-14">
             <h4 className="ml-4">LinkedIn: linkedin.co/yasinnkhann</h4>
-            <div>
+            <div className="mr-4">
               <StaticImage
                 className="h-[3.125rem] w-[3.125rem]"
                 src="../assets/linkedin-svgrepo-com.svg"
@@ -36,7 +36,7 @@ export default function Contact() {
 
           <div className="flex justify-between mb-14">
             <h4 className="ml-4">Email: yasinkhan500@gmail.com</h4>
-            <div>
+            <div className="mr-4">
               <StaticImage
                 className="h-[3.125rem] w-[3.125rem]"
                 src="../assets/email-svgrepo-com.svg"
@@ -47,7 +47,7 @@ export default function Contact() {
 
           <div className="flex justify-between mb-14">
             <h4 className="ml-4">Instagram: yasinnkhann</h4>
-            <div>
+            <div className="mr-4">
               <StaticImage
                 className="h-[3.125rem] w-[3.125rem]"
                 src="../assets/instagram-2-1-logo-svgrepo-com.svg"
