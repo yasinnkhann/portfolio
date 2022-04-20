@@ -9,7 +9,7 @@ export default function Projects() {
         <title>Projects</title>
       </Helmet>
       <Layout>
-        <section>
+        <section className="mt-[calc(2.5rem+1rem)]">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio sint
           porro tempore, dolores repudiandae voluptates tenetur nostrum!
           Possimus dolorem laboriosam iure, ipsum vero, commodi, fuga sunt

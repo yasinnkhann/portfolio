@@ -9,7 +9,7 @@ export default function About() {
         <title>About</title>
       </Helmet>
       <Layout>
-        <section>
+        <section className="mt-[calc(2.5rem+1rem)]">
           My name is Yasin Khan and I&apos;m a software engineer based in the
           San Diego County!
         </section>
