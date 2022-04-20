@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  * {
-    @apply box-border;
-  }
+:root {
+  --header-height: 3rem;
+}
 
+* {
+  @apply box-border;
+}
+
+@layer base {
   h1 {
     @apply text-3xl;
   }

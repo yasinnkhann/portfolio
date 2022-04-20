@@ -9,7 +9,7 @@ export default function Home() {
         <title>Home</title>
       </Helmet>
       <Layout>
-        <section className="font-[Manrope] mt-[calc(2.5rem+1rem)]">
+        <section className="font-[Manrope] mt-[calc(var(--header-height)+1rem)]">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
           ullam, magnam unde earum nesciunt sequi eveniet suscipit rem alias,
           sint modi dignissimos exercitationem ducimus nisi, omnis reiciendis
@@ -26,7 +26,11 @@ export default function Home() {
           enim? Exercitationem, beatae! Lorem ipsum dolor sit, amet consectetur
           adipisicing elit. Saepe quae voluptatibus corrupti eligendi nulla
           deleniti, quibusdam quod sit! Quam ipsam labore aliquid debitis totam
-          voluptates nesciunt consequatur vero, eius tenetur.
+          voluptates nesciunt consequatur vero, eius tenetur. Lorem ipsum dolor
+          sit, amet consectetur adipisicing elit. Consequatur, illum fugiat!
+          Neque earum dolorum atque reiciendis, deserunt quia velit. Debitis ut
+          assumenda maxime. Necessitatibus, perferendis impedit! Ipsum repellat
+          aut reiciendis!
         </section>
       </Layout>
     </>

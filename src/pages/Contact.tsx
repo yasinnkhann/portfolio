@@ -11,10 +11,11 @@ export default function Contact() {
         <title>Contact</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(2.5rem+1rem)] flex flex-col items-center font-[Manrope]">
-          <div className="flex justify-between my-12 items-center">
+        <section className="mt-[calc(var(--header-height)+1rem)] flex flex-col items-center font-[Manrope]">
+          <div className="flex justify-between my-8 items-center border-[3px] border-orange-400 bg-gray-300 p-3 w-[80%] rounded-lg shadow-lg hover:border-orange-600">
             <h4>
-              Github:{` `}
+              Github:
+              <br />
               <a
                 href="https://github.com/yasinnkhann"
                 target="_blank"
@@ -34,9 +35,10 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex justify-between my-12 items-center">
+          <div className="flex justify-between my-8 items-center border-[3px] border-green-400 bg-blue-200 p-3 w-[80%] rounded-lg shadow-lg hover:border-green-600">
             <h4>
-              LinkedIn:{` `}
+              LinkedIn:
+              <br />
               <a
                 href="https://www.linkedin.com/in/yasinnkhann/"
                 target="_blank"
@@ -59,9 +61,10 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex justify-between my-12 items-center">
+          <div className="flex justify-between my-8 items-center border-[3px] border-purple-400 bg-red-200 p-3 w-[80%] rounded-lg shadow-lg hover:border-purple-600">
             <h4>
-              Email:{` `}
+              Email:
+              <br />
               <a
                 href="mailto:yasinkhan500@gmail.com"
                 target="_blank"
@@ -81,9 +84,10 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex justify-between my-12 items-center">
+          <div className="flex justify-between my-8 items-center border-[3px] border-blue-400 bg-pink-300 p-3 w-[80%] rounded-lg shadow-lg hover:border-blue-600">
             <h4>
-              Instagram:{` `}
+              Instagram:
+              <br />
               <a
                 href="https://www.instagram.com/yasinnkhann/"
                 target="_blank"

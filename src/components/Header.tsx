@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 export default function Header() {
   return (
-    <header className="fixed bg-red-500 w-full top-0 h-10 z-[999] flex items-center">
+    <header className="fixed bg-red-500 w-full top-0 h-12 z-[999] flex items-center">
       <nav className="w-full">
         <ul className="text-base flex justify-around">
           <li>
