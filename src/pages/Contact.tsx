@@ -84,12 +84,12 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="flex justify-between my-8 items-center border-[3px] border-blue-400 bg-pink-300 p-3 w-[80%] rounded-lg shadow-lg hover:border-blue-600">
+          <div className="flex justify-between my-8 items-center border-[3px] border-pink-400 bg-blue-300 p-3 w-[80%] rounded-lg shadow-lg hover:border-pink-600">
             <h4>
-              Instagram:
+              Discord:
               <br />
               <a
-                href="https://www.instagram.com/yasinnkhann/"
+                href="https://discordapp.com/users/yasinnkhann/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -97,11 +97,14 @@ export default function Contact() {
               </a>
             </h4>
             <div className="ml-4">
-              <Link to="https://www.instagram.com/yasinnkhann/" target="_blank">
+              <Link
+                to="https://discordapp.com/users/yasinnkhann/"
+                target="_blank"
+              >
                 <StaticImage
                   className="h-[3.125rem] w-[3.125rem] hover:scale-125"
-                  src="../assets/instagram-2-1-logo-svgrepo-com.svg"
-                  alt="instagram icon"
+                  src="../assets/discord-v2-svgrepo-com.svg"
+                  alt="discord icon"
                 />
               </Link>
             </div>
