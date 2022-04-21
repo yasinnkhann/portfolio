@@ -73,7 +73,7 @@ export default function Contact() {
                 yasinkhan500@gmail.com
               </a>
             </h4>
-            <div className="ml-4">
+            <div className="ml-1">
               <Link to="mailto:yasinkhan500@gmail.com" target="_blank">
                 <StaticImage
                   className="h-[3.125rem] w-[3.125rem] hover:scale-125"
