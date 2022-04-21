@@ -35,7 +35,9 @@ export default function About() {
             learn and ones that are constantly updating, leaving the previous
             versions deprecated. For that reason, I&apos;m constantly learning
             to this day and looking for new ways to improve myself. Do I think
-            it gets taxing? Far from it.
+            it gets taxing? Far from it. I love seeing the evolution of
+            technology and using it to aid me in making my thoughts become a
+            reality.
           </div>
         </section>
       </Layout>
