@@ -33,19 +33,22 @@ export default function Home() {
   };
 
   const checkCookie = async () => {
-    const { data } = await axios.get(`http://localhost:8001/cookie`);
-    console.log(data);
+    const { data } = await axios.get(`http://localhost:8001/cookie`, {
+      withCredentials: true,
+    });
+    console.log('DATA: ', data);
     if (data === `no-cookie`) {
       makeConfetti();
       const { data: editedData } = await axios.get(
         `http://localhost:8001/cookie`,
         {
+          withCredentials: true,
           headers: {
             koockie: `true`,
           },
         },
       );
-      console.log(editedData);
+      console.log('EDITED DATA: ', editedData);
     }
   };
 
