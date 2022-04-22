@@ -31,8 +31,11 @@
     ]
   },
   "dependencies": {
+    "@types/cors": "2.8.12",
     "add": "2.0.6",
     "canvas-confetti": "1.5.1",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
     "express": "4.17.3",
     "gatsby": "4.9.3",
     "gatsby-plugin-google-fonts": "1.0.1",

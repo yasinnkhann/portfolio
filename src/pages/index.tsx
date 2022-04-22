@@ -4,7 +4,16 @@ import { Helmet } from 'react-helmet';
 import confetti from 'canvas-confetti';
 
 export default function Home() {
-  useEffect(() => {
+  const checkCookie = async () => {
+    const res = await fetch(`http://localhost:8001/cookie`);
+    const data = await res.json();
+    console.log(res);
+    console.log(data);
+    console.log(document.cookie);
+    return document.cookie;
+  };
+
+  const makeConfetti = () => {
     const duration = 2 * 1000;
     const end = Date.now() + duration;
 
@@ -29,7 +38,15 @@ export default function Home() {
         requestAnimationFrame(frame);
       }
     })();
+  };
+
+  useEffect(() => {
+    const cookie = checkCookie();
+    if (!cookie) {
+      makeConfetti();
+    }
   }, []);
+
   return (
     <>
       <Helmet>
