@@ -2,17 +2,9 @@ import React, { useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { Helmet } from 'react-helmet';
 import confetti from 'canvas-confetti';
+import axios from 'axios';
 
 export default function Home() {
-  const checkCookie = async () => {
-    const res = await fetch(`http://localhost:8001/cookie`);
-    const data = await res.json();
-    console.log(res);
-    console.log(data);
-    console.log(document.cookie);
-    return document.cookie;
-  };
-
   const makeConfetti = () => {
     const duration = 2 * 1000;
     const end = Date.now() + duration;
@@ -40,11 +32,25 @@ export default function Home() {
     })();
   };
 
-  useEffect(() => {
-    const cookie = checkCookie();
-    if (!cookie) {
+  const checkCookie = async () => {
+    const { data } = await axios.get(`http://localhost:8001/cookie`);
+    console.log(data);
+    if (data === `no-cookie`) {
       makeConfetti();
+      const { data: editedData } = await axios.get(
+        `http://localhost:8001/cookie`,
+        {
+          headers: {
+            koockie: 'true',
+          },
+        },
+      );
+      console.log(editedData);
     }
+  };
+
+  useEffect(() => {
+    checkCookie();
   }, []);
 
   return (

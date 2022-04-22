@@ -10,8 +10,13 @@ app.use(cookieParser());
 gatsby.prepare({ app }, () => {
   // Here you can define your routes
   app.get('/cookie', (req, res) => {
-    res.cookie('cookie-on-entry', 'my-cookie');
-    res.json('hello world');
+    if (!res.get(`set-cookie`) && !req.headers.koockie) {
+      res.json('no-cookie');
+    }
+    if (!res.get(`set-cookie`) && req.headers.koockie) {
+      res.cookie('cookie-on-entry', 'my-cookie');
+      res.json(res.getHeaders()['set-cookie']);
+    }
   });
 });
 
