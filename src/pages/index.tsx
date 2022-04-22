@@ -41,7 +41,7 @@ export default function Home() {
         `http://localhost:8001/cookie`,
         {
           headers: {
-            koockie: 'true',
+            koockie: `true`,
           },
         },
       );
