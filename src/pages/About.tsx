@@ -1,7 +1,7 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Helmet } from 'react-helmet';
 import Layout from '@/components/Layout';
+import { Helmet } from 'react-helmet';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function About() {
   return (
@@ -10,7 +10,7 @@ export default function About() {
         <title>About</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(var(--header-height)+1rem)] font-[Manrope]">
+        <section className="mt-[calc(var(--header-height)+1rem)] mb-1 font-[Manrope]">
           <StaticImage
             src="../assets/photo-in-favela.JPG"
             alt="me in rio"

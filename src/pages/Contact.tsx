@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
-import { Helmet } from 'react-helmet';
 import Layout from '@/components/Layout';
+import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
+import { StaticImage } from 'gatsby-plugin-image';
 
 export default function Contact() {
   return (
@@ -27,7 +27,7 @@ export default function Contact() {
             <div className="ml-4">
               <Link to="https://github.com/yasinnkhann" target="_blank">
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem] hover:scale-125"
+                  className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_1s_ease-in-out_infinite]"
                   src="../assets/github-svgrepo-com.svg"
                   alt="github icon"
                 />
@@ -53,7 +53,7 @@ export default function Contact() {
                 target="_blank"
               >
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem] hover:scale-125"
+                  className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_1s_ease-in-out_infinite]"
                   src="../assets/linkedin-svgrepo-com.svg"
                   alt="linkedin icon"
                 />
@@ -76,7 +76,7 @@ export default function Contact() {
             <div className="ml-1">
               <Link to="mailto:yasinkhan500@gmail.com" target="_blank">
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem] hover:scale-125"
+                  className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_1s_ease-in-out_infinite]"
                   src="../assets/email-svgrepo-com.svg"
                   alt="email icon"
                 />
@@ -102,7 +102,7 @@ export default function Contact() {
                 target="_blank"
               >
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem] hover:scale-125"
+                  className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_.5s_ease-in-out_infinite]"
                   src="../assets/discord-v2-svgrepo-com.svg"
                   alt="discord icon"
                 />

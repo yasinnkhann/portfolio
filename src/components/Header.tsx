@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 // import { navigate } from 'gatsby';
 
 export default function Header() {
   const endpoint = window.location.pathname;
+
+  useEffect(() => {
+    if (endpoint.includes(`about`)) {
+      document.body.style.backgroundColor = `cornsilk`;
+    } else if (endpoint.includes(`contact`)) {
+      document.body.style.backgroundColor = `ivory`;
+    } else {
+      document.body.style.backgroundColor = ``;
+    }
+  }, [document.body.style.backgroundColor]);
 
   return (
     <header className="fixed bg-red-500 w-full top-0 h-12 z-[999] flex items-center font-[Manrope]">

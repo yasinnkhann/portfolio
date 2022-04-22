@@ -9,6 +9,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-nodejs`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -16,9 +17,6 @@ module.exports = {
           'Manrope',
           `sans-serif`, // you can also specify font weights and styles
         ],
-        name: `images`,
-        path: path.join(__dirname, `src`, `assets`),
-        display: 'swap',
       },
     },
   ],

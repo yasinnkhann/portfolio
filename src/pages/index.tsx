@@ -1,8 +1,35 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useEffect } from 'react';
 import Layout from '@/components/Layout';
+import { Helmet } from 'react-helmet';
+import confetti from 'canvas-confetti';
 
 export default function Home() {
+  useEffect(() => {
+    const duration = 2 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      // launch a few confetti from the left edge
+      confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+      });
+      // and launch a few from the right edge
+      confetti({
+        particleCount: 7,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+      });
+
+      // keep going until we are out of time
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  }, []);
   return (
     <>
       <Helmet>
@@ -10,27 +37,9 @@ export default function Home() {
       </Helmet>
       <Layout>
         <section className="font-[Manrope] mt-[calc(var(--header-height)+1rem)]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
-          ullam, magnam unde earum nesciunt sequi eveniet suscipit rem alias,
-          sint modi dignissimos exercitationem ducimus nisi, omnis reiciendis
-          fugit iure? Amet! Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Veniam minima porro error adipisci ad incidunt, corporis debitis
-          cumque commodi aliquid libero! Delectus iusto voluptatum repudiandae
-          cum aliquid? Inventore, expedita cum. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Error, deserunt odio pariatur minima
-          natus praesentium delectus ab, laboriosam dolore alias perspiciatis
-          debitis illo facilis assumenda corrupti! Natus repudiandae expedita
-          nobis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error
-          facere aliquam est numquam sit debitis inventore quasi saepe, corrupti
-          animi! Exercitationem cupiditate magnam, fuga voluptatem excepturi est
-          enim? Exercitationem, beatae! Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Saepe quae voluptatibus corrupti eligendi nulla
-          deleniti, quibusdam quod sit! Quam ipsam labore aliquid debitis totam
-          voluptates nesciunt consequatur vero, eius tenetur. Lorem ipsum dolor
-          sit, amet consectetur adipisicing elit. Consequatur, illum fugiat!
-          Neque earum dolorum atque reiciendis, deserunt quia velit. Debitis ut
-          assumenda maxime. Necessitatibus, perferendis impedit! Ipsum repellat
-          aut reiciendis!
+          <div>
+            <h1 className="text-center">WELCOME</h1>
+          </div>
         </section>
       </Layout>
     </>
