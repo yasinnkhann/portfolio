@@ -36,19 +36,14 @@ export default function Home() {
     const { data } = await axios.get(`http://localhost:8001/cookie`, {
       withCredentials: true,
     });
-    console.log('DATA: ', data);
     if (data === `no-cookie`) {
       makeConfetti();
-      const { data: editedData } = await axios.get(
-        `http://localhost:8001/cookie`,
-        {
-          withCredentials: true,
-          headers: {
-            koockie: `true`,
-          },
+      await axios.get(`http://localhost:8001/cookie`, {
+        withCredentials: true,
+        headers: {
+          koockie: `true`,
         },
-      );
-      console.log('EDITED DATA: ', editedData);
+      });
     }
   };
 
