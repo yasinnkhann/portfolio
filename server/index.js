@@ -25,14 +25,6 @@ gatsby.prepare({ app }, () => {
       res.setHeader('set-cookie', [`entry=my-cookie`]);
       req.cookies.entry = 'my-cookie';
       res.json(res.getHeaders()['set-cookie']);
-      return;
-    }
-    if (
-      res.getHeaders()['set-cookie'] &&
-      req.cookies.entry &&
-      req.headers.koockie
-    ) {
-      res.json(res.getHeaders()['set-cookie']);
     }
   });
 });
