@@ -14,9 +14,9 @@ export default function About() {
           <StaticImage
             src="../assets/photo-in-favela.JPG"
             alt="me in rio"
-            className="!float-right w-[50%] h-[50%] m-2"
+            className="!float-right w-[50%] h-[50%] mx-2"
           />
-          <div className="ml-2">
+          <div className="mx-4 text-base sm:text-lg md:text-lg lg:text-xl">
             So you wanna know a little more about me huh? Well, allow me to
             introduce myself. My name is Yasin Khan and I&apos;m a software
             engineer based in the San Diego County. After graduating from the

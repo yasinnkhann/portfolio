@@ -3,27 +3,49 @@ import { Link } from 'gatsby';
 // import { navigate } from 'gatsby';
 
 export default function Header() {
+  const endpoint = window.location.pathname;
+
   return (
     <header className="fixed bg-red-500 w-full top-0 h-12 z-[999] flex items-center font-[Manrope]">
       <nav className="w-full">
         <ul className="text-base flex justify-around">
           <li>
-            <Link to="/" className="text-white cursor-pointer">
+            <Link
+              to="/"
+              className={`${
+                endpoint === `/` ? `text-yellow-300` : `text-white`
+              } cursor-pointer`}
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className=" text-white cursor-pointer">
+            <Link
+              to="/about"
+              className={`${
+                endpoint.includes(`about`) ? `text-yellow-300` : `text-white`
+              } cursor-pointer`}
+            >
               About
             </Link>
           </li>
           <li>
-            <Link to="/projects" className="text-white cursor-pointer">
+            <Link
+              to="/projects"
+              className={`${
+                endpoint.includes(`projects`) ? `text-yellow-300` : `text-white`
+              } cursor-pointer`}
+            >
               Projects
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="text-white cursor-pointer">
+            <Link
+              to="/contact"
+              className={`${
+                endpoint.includes(`contact`) ? `text-yellow-300` : `text-white`
+              } cursor-pointer`}
+            >
               Contact
             </Link>
           </li>
