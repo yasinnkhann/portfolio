@@ -51,6 +51,16 @@ export default function Header() {
           </li>
           <li>
             <Link
+              to="/skills"
+              className={`${
+                endpoint.includes(`/skills`) ? `text-yellow-300` : `text-white`
+              } cursor-pointer`}
+            >
+              Skills
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/contact"
               className={`${
                 endpoint.includes(`contact`) ? `text-yellow-300` : `text-white`

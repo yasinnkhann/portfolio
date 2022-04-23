@@ -1,5 +1,3 @@
-const path = require(`path`);
-
 module.exports = {
   // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
   // don't need to define it here (just if you need to change the options)
@@ -17,6 +15,14 @@ module.exports = {
           'Manrope',
           `sans-serif`, // you can also specify font weights and styles
         ],
+        display: 'swap',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
   ],
