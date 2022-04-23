@@ -21,9 +21,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
   ],
 };
+
+// query MyQuery {
+//   allFile {
+//     edges {
+//       node {
+//         id
+//         relativePath
+//         relativeDirectory
+//         name
+//       }
+//     }
+//   }
+// }

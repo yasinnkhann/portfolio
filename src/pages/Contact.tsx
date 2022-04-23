@@ -28,7 +28,7 @@ export default function Contact() {
               <Link to="https://github.com/yasinnkhann" target="_blank">
                 <StaticImage
                   className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_1s_ease-in-out_infinite]"
-                  src="../assets/github-svgrepo-com.svg"
+                  src="../assets/contacts/github-svgrepo-com.svg"
                   alt="github icon"
                 />
               </Link>
@@ -54,7 +54,7 @@ export default function Contact() {
               >
                 <StaticImage
                   className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_1s_ease-in-out_infinite]"
-                  src="../assets/linkedin-svgrepo-com.svg"
+                  src="../assets/contacts/linkedin-svgrepo-com.svg"
                   alt="linkedin icon"
                 />
               </Link>
@@ -77,7 +77,7 @@ export default function Contact() {
               <Link to="mailto:yasinkhan500@gmail.com" target="_blank">
                 <StaticImage
                   className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_1s_ease-in-out_infinite]"
-                  src="../assets/email-svgrepo-com.svg"
+                  src="../assets/contacts/email-svgrepo-com.svg"
                   alt="email icon"
                 />
               </Link>
@@ -103,7 +103,7 @@ export default function Contact() {
               >
                 <StaticImage
                   className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_.5s_ease-in-out_infinite]"
-                  src="../assets/discord-v2-svgrepo-com.svg"
+                  src="../assets/contacts/discord-v2-svgrepo-com.svg"
                   alt="discord icon"
                 />
               </Link>
