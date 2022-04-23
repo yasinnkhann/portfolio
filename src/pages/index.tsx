@@ -7,7 +7,6 @@ import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function Home({ data }) {
-  console.log(data);
   const makeConfetti = () => {
     const duration = 2 * 1000;
     const end = Date.now() + duration;
@@ -65,11 +64,9 @@ export default function Home({ data }) {
       <Layout>
         <section className="font-[Manrope] mt-[calc(var(--header-height)+1rem)]">
           <h1 className="text-center">WELCOME</h1>
-          {/* <Img fluid={data.file.childImageSharp.fluid} alt="" /> */}
           <GatsbyImage
             image={data.file.childImageSharp.gatsbyImageData}
             alt=""
-            // className="w-full h-full"
           />
         </section>
       </Layout>
@@ -79,7 +76,11 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativeDirectory: { eq: "home" }) {
+    file(
+      relativePath: {
+        eq: "home/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpeg"
+      }
+    ) {
       id
       name
       childImageSharp {
