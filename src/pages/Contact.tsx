@@ -1,6 +1,5 @@
 import React from 'react';
 import Layout from '@/components/Layout';
-import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -25,13 +24,17 @@ export default function Contact() {
               </a>
             </h4>
             <div className="ml-4">
-              <Link to="https://github.com/yasinnkhann" target="_blank">
+              <a
+                href="https://github.com/yasinnkhann"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <StaticImage
                   className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_1s_ease-in-out_infinite]"
                   src="../assets/contacts/github-svgrepo-com.svg"
                   alt="github icon"
                 />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -48,8 +51,9 @@ export default function Contact() {
               </a>
             </h4>
             <div className="ml-4">
-              <Link
-                to="https://www.linkedin.com/in/yasinnkhann/"
+              <a
+                href="https://www.linkedin.com/in/yasinnkhann/"
+                rel="noreferrer"
                 target="_blank"
               >
                 <StaticImage
@@ -57,7 +61,7 @@ export default function Contact() {
                   src="../assets/contacts/linkedin-svgrepo-com.svg"
                   alt="linkedin icon"
                 />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -74,13 +78,17 @@ export default function Contact() {
               </a>
             </h4>
             <div className="ml-1">
-              <Link to="mailto:yasinkhan500@gmail.com" target="_blank">
+              <a
+                href="mailto:yasinkhan500@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <StaticImage
                   className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_1s_ease-in-out_infinite]"
                   src="../assets/contacts/email-svgrepo-com.svg"
                   alt="email icon"
                 />
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -97,8 +105,9 @@ export default function Contact() {
               </a>
             </h4>
             <div className="ml-4">
-              <Link
-                to="https://discordapp.com/users/yasinnkhann/"
+              <a
+                href="https://discordapp.com/users/yasinnkhann/"
+                rel="noreferrer"
                 target="_blank"
               >
                 <StaticImage
@@ -106,7 +115,7 @@ export default function Contact() {
                   src="../assets/contacts/discord-v2-svgrepo-com.svg"
                   alt="discord icon"
                 />
-              </Link>
+              </a>
             </div>
           </div>
         </section>

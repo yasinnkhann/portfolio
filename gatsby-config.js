@@ -27,16 +27,3 @@ module.exports = {
     },
   ],
 };
-
-// query MyQuery {
-//   allFile {
-//     edges {
-//       node {
-//         id
-//         relativePath
-//         relativeDirectory
-//         name
-//       }
-//     }
-//   }
-// }
