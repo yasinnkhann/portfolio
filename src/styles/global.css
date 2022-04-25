@@ -4,6 +4,12 @@
 
 :root {
   --header-height: 3rem;
+  --skill-photo-size-mobile: 5rem;
+  --skill-photo-size-sm: 7rem;
+  --skill-photo-size-md: 9rem;
+  --skill-photo-size-lg: 10rem;
+  --skill-photo-size-xl: 12rem;
+  --skill-photo-size-2xl: 15rem;
 }
 
 * {

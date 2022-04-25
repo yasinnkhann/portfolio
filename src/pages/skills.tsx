@@ -11,10 +11,10 @@ export default function Skills({ data }) {
   const mappedSkills = data.allFile.edges.map((edge) => (
     <div
       key={edge.node.id}
-      className="rounded-full bg-gray-200 m-4 w-[5rem] h-[5rem] text-base sm:w-[7rem] sm:h-[7rem] md:w-[10rem] md:h-[10rem] lg:w-[12rem] lg:h-[12rem] xl:w-[15rem] xl:h-[15rem] 2xl:w-[18rem] 2xl:h-[18rem]"
+      className="rounded-full bg-gray-200 m-8 w-[var(--skill-photo-size-mobile)] h-[var(--skill-photo-size-mobile)] sm:w-[var(--skill-photo-size-sm)] sm:h-[var(--skill-photo-size-sm)] md:w-[var(--skill-photo-size-md)] md:h-[var(--skill-photo-size-md)] lg:w-[var(--skill-photo-size-lg)] lg:h-[var(--skill-photo-size-lg)] xl:w-[var(--skill-photo-size-xl)] xl:h-[var(--skill-photo-size-xl)] 2xl:w-[var(--skill-photo-size-2xl)] 2xl:h-[var(--skill-photo-size-2xl)]"
     >
       <img
-        className="w-full"
+        className="w-full hover:animate-spin-slow"
         src={edge.node.publicURL}
         alt={
           !multipleWordsExceptions[edge.node.name]
@@ -36,11 +36,8 @@ export default function Skills({ data }) {
         <title>Skills</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(var(--header-height)+1rem)] mb-1 font-[Manrope]">
-          <div
-            className="grid grid-cols-[1fr_1fr_1fr] justify-items-center sm:absolute sm:justify-items-start sm:animate-run md:animate-run lg:animate-run xl:animate-run
-          2xl:animate-run"
-          >
+        <section className="mt-[calc(var(--header-height)+1rem)] font-[Manrope]">
+          <div className="grid grid-cols-[1fr_1fr_1fr] justify-items-center sm:absolute sm:justify-items-start sm:animate-runSM md:absolute md:justify-items-start md:animate-runMD lg:absolute lg:justify-items-start lg:animate-runLG xl:absolute xl:justify-items-start xl:animate-runXL 2xl:absolute 2xl:justify-items-start 2xl:animate-run2XL">
             {mappedSkills}
           </div>
         </section>
