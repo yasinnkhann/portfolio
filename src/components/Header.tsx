@@ -5,21 +5,23 @@ import { Link } from 'gatsby';
 export default function Header() {
   const endpoint = window.location.pathname;
 
-  useEffect(() => {
-    if (endpoint.includes(`about`)) {
-      document.body.style.backgroundColor = `cornsilk`;
-    } else if (endpoint.includes(`contact`)) {
-      document.body.style.backgroundColor = `ivory`;
-    } else {
-      document.body.style.backgroundColor = ``;
-    }
-  }, [document.body.style.backgroundColor]);
+  // useEffect(() => {
+  //   if (endpoint.includes(`about`)) {
+  //     document.body.style.backgroundColor = `cornsilk`;
+  //   } else if (endpoint.includes(`contact`)) {
+  //     document.body.style.backgroundColor = `ivory`;
+  //   } else {
+  //     document.body.style.backgroundColor = ``;
+  //   }
+  // }, [document.body.style.backgroundColor]);
 
   return (
     <header className="fixed bg-red-500 w-full top-0 h-12 z-[999] flex items-center font-[Manrope]">
       <nav className="w-full">
         <ul className="text-base flex justify-around">
           <li>
+            {/* eslint-disable-next-line */}
+            {/*  @ts-ignore */}
             <Link
               to="/"
               className={`${
@@ -30,6 +32,8 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            {/* eslint-disable-next-line */}
+            {/*  @ts-ignore */}
             <Link
               to="/about"
               className={`${
@@ -40,6 +44,8 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            {/* eslint-disable-next-line */}
+            {/*  @ts-ignore */}
             <Link
               to="/projects"
               className={`${
@@ -50,6 +56,8 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            {/* eslint-disable-next-line */}
+            {/*  @ts-ignore */}
             <Link
               to="/skills"
               className={`${
@@ -60,6 +68,8 @@ export default function Header() {
             </Link>
           </li>
           <li>
+            {/* eslint-disable-next-line */}
+            {/*  @ts-ignore */}
             <Link
               to="/contact"
               className={`${

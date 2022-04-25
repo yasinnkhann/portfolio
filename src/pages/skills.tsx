@@ -37,7 +37,7 @@ export default function Skills({ data }) {
       </Helmet>
       <Layout>
         <section className="mt-[calc(var(--header-height)+1rem)] font-[Manrope]">
-          <div className="grid grid-cols-[1fr_1fr_1fr] justify-items-center sm:absolute sm:justify-items-start sm:animate-runSM md:absolute md:justify-items-start md:animate-runMD lg:grid-cols-[1fr_1fr_1fr_1fr] lg:absolute lg:justify-items-start lg:animate-runLG xl:absolute xl:justify-items-start xl:animate-runXL 2xl:absolute 2xl:justify-items-start 2xl:animate-run2XL">
+          <div className="grid grid-cols-[1fr_1fr] justify-items-center sm:grid-cols-[1fr_1fr_1fr] sm:absolute sm:justify-items-start sm:animate-runSM md:absolute md:justify-items-start md:animate-runMD lg:grid-cols-[1fr_1fr_1fr_1fr] lg:absolute lg:justify-items-start lg:animate-runLG xl:absolute xl:justify-items-start xl:animate-runXL 2xl:absolute 2xl:justify-items-start 2xl:animate-run2XL">
             {mappedSkills}
           </div>
         </section>

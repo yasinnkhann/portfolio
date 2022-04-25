@@ -12,7 +12,7 @@ export default function About() {
       <Layout>
         <section className="mt-[calc(var(--header-height)+1rem)] mb-1 font-[Manrope]">
           <StaticImage
-            src="../assets/about/photo-in-favela.JPG"
+            src="../assets/about/photo-in-rio.jpg"
             alt="me in rio"
             className="!float-right w-[50%] h-[50%] mx-2"
           />

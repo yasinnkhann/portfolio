@@ -76,11 +76,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(
-      relativePath: {
-        eq: "home/pngtree-pure-color-watercolor-graffiti-gradient-background-board-design-board-design-image_66713.jpeg"
-      }
-    ) {
+    file(relativePath: { eq: "home/watercolor-graffiti.jpeg" }) {
       id
       name
       childImageSharp {
