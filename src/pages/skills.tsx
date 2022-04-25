@@ -48,7 +48,10 @@ export default function Skills({ data }) {
 
 export const query = graphql`
   query AllSkills {
-    allFile(filter: { relativeDirectory: { eq: "skills" } }) {
+    allFile(
+      filter: { relativeDirectory: { eq: "skills" } }
+      sort: { fields: name, order: ASC }
+    ) {
       edges {
         node {
           id
