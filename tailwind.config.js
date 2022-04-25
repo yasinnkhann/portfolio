@@ -10,6 +10,13 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         },
+        run: {
+          '0%, 100%': { left: '0' },
+          '50%': { left: 'calc(100% - 15rem)' },
+        },
+      },
+      animation: {
+        run: 'run 50s linear infinite',
       },
     },
   },

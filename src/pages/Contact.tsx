@@ -111,7 +111,7 @@ export default function Contact() {
                 target="_blank"
               >
                 <StaticImage
-                  className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_.5s_ease-in-out_infinite]"
+                  className="h-[3.125rem] w-[3.125rem] hover:animate-[wiggle_.8s_ease-in-out_infinite]"
                   src="../assets/contacts/discord-v2-svgrepo-com.svg"
                   alt="discord icon"
                 />
