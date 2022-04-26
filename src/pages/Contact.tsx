@@ -10,8 +10,8 @@ export default function Contact() {
         <title>Contact</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(var(--header-height)+1rem)] flex flex-col items-center font-[Manrope]">
-          <div className="flex justify-between my-8 items-center border-[3px] border-orange-400 bg-gray-300 p-3 w-[80%] rounded-lg shadow-lg hover:border-orange-600">
+        <section className="mt-[calc(var(--header-height-mobile)+1rem)] flex flex-col items-center font-[Manrope]">
+          <div className="flex justify-between my-8 items-center border-[3px] border-orange-400 bg-gray-300 p-3 w-[80%] rounded-lg shadow-lg hover:border-orange-600 2xl:mt-[calc(var(--header-height-2xl)+1rem)]">
             <h4>
               Github:
               <br />

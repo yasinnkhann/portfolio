@@ -16,9 +16,9 @@ export default function Header() {
   // }, [document.body.style.backgroundColor]);
 
   return (
-    <header className="fixed bg-red-500 w-full top-0 h-[var(--header-height)] z-[999] flex items-center font-[Manrope]">
+    <header className="fixed bg-red-500 w-full top-0 h-[var(--header-height-mobile)] z-[999] flex items-center font-[Manrope] shadow-[1px_1px_1px_3px] 2xl:h-[var(--header-height-2xl)]">
       <nav className="w-full">
-        <ul className="text-base flex justify-around">
+        <ul className="text-base flex justify-around 2xl:text-2xl">
           <li>
             {/* eslint-disable-next-line */}
             {/*  @ts-ignore */}

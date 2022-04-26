@@ -62,15 +62,15 @@ export default function Home({ data }) {
         <title>Home</title>
       </Helmet>
       <Layout>
-        <section className="font-[Manrope] mt-[calc(var(--header-height))] h-[calc(100vh-var(--header-height))]">
+        <section className="font-[Manrope] mt-[calc(var(--header-height-mobile)+1rem)] 2xl:mt-[calc(var(--header-height-2xl)+1rem)]">
           <h1 className="text-center">WELCOME</h1>
           <GatsbyImage
-            className=""
+            className="max-h-[calc(100vh-var(--header-height-mobile)-4rem)] 2xl:max-h-[calc(100vh-var(--header-height-2xl)-4rem)]"
             image={data.file.childImageSharp.gatsbyImageData}
             alt=""
           />
         </section>
-        {/* <section className="font-[Manrope] mt-[calc(var(--header-height))] bg-[url('../assets/home/leader.png')] bg-no-repeat bg-[length:100%] h-[calc(100vh-var(--header-height))]">
+        {/* <section className="font-[Manrope] mt-[calc(var(--header-height-mobile))] bg-[url('../assets/home/leader.png')] bg-no-repeat bg-[length:100%] h-[calc(100vh-var(--header-height-mobile))]">
           <h1 className="text-center">WELCOME</h1>
           <GatsbyImage
             image={data.file.childImageSharp.gatsbyImageData}
@@ -84,7 +84,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativePath: { eq: "home/leader.png" }) {
+    file(relativePath: { eq: "home/splash2.png" }) {
       id
       name
       childImageSharp {

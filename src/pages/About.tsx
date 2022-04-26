@@ -10,7 +10,7 @@ export default function About() {
         <title>About</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(var(--header-height)+1rem)] mb-1 font-[Manrope]">
+        <section className="mt-[calc(var(--header-height-mobile)+1rem)] mb-1 font-[Manrope] 2xl:mt-[calc(var(--header-height-2xl)+1rem)]">
           <StaticImage
             src="../assets/about/photo-in-rio.jpg"
             alt="me in rio"

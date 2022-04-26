@@ -36,8 +36,8 @@ export default function Skills({ data }) {
         <title>Skills</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(var(--header-height)+1rem)] font-[Manrope]">
-          <div className="grid grid-cols-[1fr_1fr] justify-items-center sm:grid-cols-[1fr_1fr_1fr] sm:absolute sm:justify-items-start sm:animate-runSM md:animate-runMD lg:grid-cols-[1fr_1fr_1fr_1fr] lg:animate-runLG xl:animate-runXL 2xl:animate-run2XL">
+        <section className="mt-[calc(var(--header-height-mobile)+1rem)] font-[Manrope]">
+          <div className="grid grid-cols-[1fr_1fr] justify-items-center sm:grid-cols-[1fr_1fr_1fr] sm:absolute sm:justify-items-start sm:animate-runSM md:animate-runMD lg:grid-cols-[1fr_1fr_1fr_1fr] lg:animate-runLG xl:animate-runXL 2xl:animate-run2XL 2xl:mt-[calc(var(--header-height-2xl)-2rem)]">
             {mappedSkills}
           </div>
         </section>

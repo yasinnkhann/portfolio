@@ -9,7 +9,7 @@ export default function Projects() {
         <title>Projects</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(var(--header-height)+1rem)] font-[Manrope]">
+        <section className="mt-[calc(var(--header-height-mobile)+1rem)] font-[Manrope] 2xl:mt-[calc(var(--header-height-2xl)+1rem)]">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio sint
           porro tempore, dolores repudiandae voluptates tenetur nostrum!
           Possimus dolorem laboriosam iure, ipsum vero, commodi, fuga sunt
