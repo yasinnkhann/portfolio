@@ -16,7 +16,7 @@ export default function About() {
             alt="me in rio"
             className="!float-right w-[50%] h-[50%] mx-2"
           />
-          <div className="mx-4 text-base sm:text-lg md:text-lg lg:text-xl">
+          <div className="mx-4 text-base sm:text-lg lg:text-xl 2xl:text-2xl">
             So you wanna know a little more about me huh? Well, allow me to
             introduce myself. My name is Yasin Khan and I&apos;m a software
             engineer based in the San Diego County. After graduating from the

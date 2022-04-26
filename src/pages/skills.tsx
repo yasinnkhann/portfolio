@@ -2,13 +2,14 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
+import { IEdge } from '../interfaces/IEdge';
 
 export default function Skills({ data }) {
   const multipleWordsExceptions = {
     'react-testing-library': true,
   };
 
-  const mappedSkills = data.allFile.edges.map((edge) => (
+  const mappedSkills = data.allFile.edges.map((edge: IEdge) => (
     <div
       key={edge.node.id}
       className="rounded-full bg-gray-200 m-11 p-[.5rem] w-[var(--skill-photo-size-mobile)] h-[var(--skill-photo-size-mobile)] sm:w-[var(--skill-photo-size-sm)] sm:h-[var(--skill-photo-size-sm)] md:w-[var(--skill-photo-size-md)] md:h-[var(--skill-photo-size-md)] lg:w-[var(--skill-photo-size-lg)] lg:h-[var(--skill-photo-size-lg)] xl:w-[var(--skill-photo-size-xl)] xl:h-[var(--skill-photo-size-xl)] 2xl:w-[var(--skill-photo-size-2xl)] 2xl:h-[var(--skill-photo-size-2xl)]"
