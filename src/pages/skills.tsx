@@ -22,7 +22,7 @@ export default function Skills({ data }) {
             : `${edge.node.name.split(`-`).join(` `)} icon`
         }
       />
-      <p className="text-center underline my-1">
+      <p className="text-center underline my-4">
         {!multipleWordsExceptions[edge.node.name]
           ? `${edge.node.name.split(`-`)[0]}`
           : `${edge.node.name.split(`-`).join(` `)}`}
