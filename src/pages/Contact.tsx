@@ -10,9 +10,9 @@ export default function Contact() {
         <title>Contact</title>
       </Helmet>
       <Layout>
-        <section className="mt-[calc(var(--header-height-mobile)+1rem)] flex flex-col items-center font-[Manrope]">
+        <section className="mt-[calc(var(--header-height-mobile)+1rem)] flex flex-col items-center font-[Manrope] 2xl:mt-[calc(var(--header-height-2xl)+1rem)]">
           <div className="flex justify-between my-8 items-center border-[3px] border-orange-400 bg-gray-300 p-3 w-[80%] rounded-lg shadow-lg hover:border-orange-600">
-            <h4 className="text-base md:flex md:w-full 2xl:text-2xl">
+            <h4 className="text-xl md:flex md:w-full 2xl:text-2xl">
               Github:
               <br />
               <a
@@ -41,7 +41,7 @@ export default function Contact() {
           </div>
 
           <div className="flex justify-between my-8 items-center border-[3px] border-green-400 bg-blue-200 p-3 w-[80%] rounded-lg shadow-lg hover:border-green-600">
-            <h4 className="text-base md:flex md:w-full 2xl:text-2xl">
+            <h4 className="text-xl md:flex md:w-full 2xl:text-2xl">
               LinkedIn:
               <br />
               <a
@@ -69,7 +69,7 @@ export default function Contact() {
           </div>
 
           <div className="flex justify-between my-8 items-center border-[3px] border-purple-400 bg-red-200 p-3 w-[80%] rounded-lg shadow-lg hover:border-purple-600">
-            <h4 className="text-base md:flex md:w-full 2xl:text-2xl">
+            <h4 className="text-xl md:flex md:w-full 2xl:text-2xl">
               Email:
               <br />
               <a
@@ -97,7 +97,7 @@ export default function Contact() {
           </div>
 
           <div className="flex justify-between my-8 items-center border-[3px] border-pink-400 bg-blue-300 p-3 w-[80%] rounded-lg shadow-lg hover:border-pink-600">
-            <h4 className="text-base md:flex md:w-full 2xl:text-2xl">
+            <h4 className="text-xl md:flex md:w-full 2xl:text-2xl">
               Discord:
               <br />
               <a
