@@ -62,12 +62,12 @@ export default function Home({ data }) {
         <title>Home</title>
       </Helmet>
       <Layout>
-        <section className="font-[Manrope] mt-[calc(var(--header-height)+1rem)]">
+        <section className="font-[Manrope] mt-[calc(var(--header-height))] bg-[url('../assets/home/watercolor-graffiti.jpeg')] h-[calc(100vh-var(--header-height))]">
           <h1 className="text-center">WELCOME</h1>
-          <GatsbyImage
+          {/* <GatsbyImage
             image={data.file.childImageSharp.gatsbyImageData}
             alt=""
-          />
+          /> */}
         </section>
       </Layout>
     </>
