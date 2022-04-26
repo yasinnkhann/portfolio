@@ -62,13 +62,21 @@ export default function Home({ data }) {
         <title>Home</title>
       </Helmet>
       <Layout>
-        <section className="font-[Manrope] mt-[calc(var(--header-height))] bg-[url('../assets/home/rainbow-umbrellas.jpg')] bg-no-repeat bg-[length:100%] h-[calc(100vh-var(--header-height))]">
+        <section className="font-[Manrope] mt-[calc(var(--header-height))] h-[calc(100vh-var(--header-height))]">
           <h1 className="text-center">WELCOME</h1>
-          {/* <GatsbyImage
+          <GatsbyImage
+            className=""
             image={data.file.childImageSharp.gatsbyImageData}
             alt=""
-          /> */}
+          />
         </section>
+        {/* <section className="font-[Manrope] mt-[calc(var(--header-height))] bg-[url('../assets/home/leader.png')] bg-no-repeat bg-[length:100%] h-[calc(100vh-var(--header-height))]">
+          <h1 className="text-center">WELCOME</h1>
+          <GatsbyImage
+            image={data.file.childImageSharp.gatsbyImageData}
+            alt=""
+          />
+        </section> */}
       </Layout>
     </>
   );
@@ -76,7 +84,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativePath: { eq: "home/rainbow-umbrellas.jpg" }) {
+    file(relativePath: { eq: "home/leader.png" }) {
       id
       name
       childImageSharp {

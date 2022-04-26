@@ -16,7 +16,7 @@ export default function Header() {
   // }, [document.body.style.backgroundColor]);
 
   return (
-    <header className="fixed bg-red-500 w-full top-0 h-12 z-[999] flex items-center font-[Manrope]">
+    <header className="fixed bg-red-500 w-full top-0 h-[var(--header-height)] z-[999] flex items-center font-[Manrope]">
       <nav className="w-full">
         <ul className="text-base flex justify-around">
           <li>
