@@ -9,9 +9,14 @@ export default function ProjectTemplate({ data: { mdx } }) {
   return (
     <div>
       <h1>{mdx.frontmatter.title}</h1>
-      <MDXProvider components={shortcodes}>
-        <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
-      </MDXProvider>
+      <br />
+      <br />
+      <br />
+      <div className="bg-red-500">
+        <MDXProvider components={shortcodes}>
+          <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </div>
     </div>
   );
 }

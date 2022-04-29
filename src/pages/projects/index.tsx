@@ -19,7 +19,6 @@ export default function Projects({ data }) {
                 <Link to={project.slug}>
                   <h2>{project.frontmatter.title}</h2>
                 </Link>
-                <p>{project.excerpt}</p>
               </li>
             ))}
           </ul>
@@ -35,11 +34,10 @@ export const query = graphql`
       edges {
         node {
           id
-          excerpt
+          slug
           frontmatter {
             title
           }
-          slug
         }
       }
     }

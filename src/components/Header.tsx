@@ -1,19 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
-// import { navigate } from 'gatsby';
 
 export default function Header() {
   const endpoint = window.location.pathname;
-
-  // useEffect(() => {
-  //   if (endpoint.includes(`about`)) {
-  //     document.body.style.backgroundColor = `cornsilk`;
-  //   } else if (endpoint.includes(`contact`)) {
-  //     document.body.style.backgroundColor = `ivory`;
-  //   } else {
-  //     document.body.style.backgroundColor = ``;
-  //   }
-  // }, [document.body.style.backgroundColor]);
 
   return (
     <header className="fixed bg-red-500 w-full top-0 h-[var(--header-height-mobile)] z-[999] flex items-center font-[Manrope] shadow-[1px_1px_1px_3px] 2xl:h-[var(--header-height-2xl)]">
