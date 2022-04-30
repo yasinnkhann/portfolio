@@ -1,11 +1,10 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, navigate } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Helmet } from 'react-helmet';
-import { navigate } from 'gatsby';
 
-const shortcodes = { Link }; // Provide common components here
+const shortcodes = { Link };
 
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
@@ -15,16 +14,13 @@ export default function ProjectTemplate({ data: { mdx } }) {
       </Helmet>
       <div>
         <h1>{mdx.frontmatter.title}</h1>
-        <br />
-        <br />
-        <br />
-        <div className="bg-red-500">
+        <div className="">
           <MDXProvider components={shortcodes}>
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
           </MDXProvider>
         </div>
         <button onClick={() => navigate(`/projects`)} type="button">
-          <p className="text-blue-500 underline">Back</p>
+          <p className="text-blue-500 underline underline-offset-1">Back</p>
         </button>
       </div>
     </>
