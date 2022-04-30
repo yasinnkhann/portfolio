@@ -5,7 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
 
-const shortcodes = { Link };
+const shortcodes = { Link, navigate };
 
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
