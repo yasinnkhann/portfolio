@@ -79,8 +79,8 @@ export default function Home({ data }) {
           </div>
           <GatsbyImage
             className="mx-auto my-auto row-start-2 row-end-3 col-start-1 col-end-3 sm:row-start-1 sm:row-end-2 sm:col-start-2"
-            image={data.file.childImageSharp.gatsbyImageData}
-            alt={data.file.name}
+            image={data.coverPhoto.childImageSharp.gatsbyImageData}
+            alt={data.coverPhoto.name}
           />
         </section>
       </Layout>
@@ -90,13 +90,13 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query Banner {
-    file(relativePath: { eq: "home/splash.png" }) {
+    coverPhoto: file(relativePath: { eq: "home/splash.png" }) {
       name
       childImageSharp {
         gatsbyImageData(
+          placeholder: BLURRED
           layout: CONSTRAINED
           transformOptions: { cropFocus: CENTER, fit: COVER }
-          blurredOptions: { width: 100 }
         )
       }
     }

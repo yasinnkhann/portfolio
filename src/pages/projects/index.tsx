@@ -4,8 +4,8 @@ import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-export default function Projects({ data }) {
-  const { edges: projects } = data.allMdx;
+export default function Projects({ data: { allMdx } }) {
+  const { edges: projects } = allMdx;
   return (
     <>
       <Helmet>
@@ -40,7 +40,7 @@ export default function Projects({ data }) {
 
 export const query = graphql`
   query projectIndex {
-    allMdx {
+    allMdx(sort: { order: ASC, fields: frontmatter___order }) {
       edges {
         node {
           id
@@ -50,7 +50,7 @@ export const query = graphql`
             thumbnail {
               childImageSharp {
                 gatsbyImageData(
-                  blurredOptions: { width: 100 }
+                  placeholder: BLURRED
                   transformOptions: { cropFocus: CENTER, fit: COVER }
                   layout: CONSTRAINED
                 )
