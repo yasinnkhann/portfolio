@@ -4,8 +4,9 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
+import Carousel from './carousel';
 
-const shortcodes = { Link, navigate };
+const shortcodes = { Link, navigate, Carousel };
 
 export default function ProjectTemplate({ data: { mdx } }) {
   return (
