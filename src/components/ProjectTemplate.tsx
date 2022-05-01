@@ -23,6 +23,9 @@ export default function ProjectTemplate({ data: { mdx } }) {
               </MDXRenderer>
             </MDXProvider>
           </div>
+          <a href={mdx.frontmatter.repo} target="_blank" rel="noreferrer">
+            Github Repo
+          </a>
           <button
             onClick={() => navigate(`/projects`)}
             type="button"
@@ -43,6 +46,7 @@ export const pageQuery = graphql`
       body
       frontmatter {
         title
+        repo
       }
     }
   }

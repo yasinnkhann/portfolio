@@ -39,6 +39,11 @@ export default function About() {
             technology and using it to aid me in making my thoughts become a
             reality.
           </div>
+          {/* <AwesomeSlider>
+            <div data-src="../assets/about/photo-in-rio.jpg" />
+            <div data-src="../assets/about/photo-in-rio.jpg" />
+            <div data-src="../assets/about/photo-in-rio.jpg" />
+          </AwesomeSlider> */}
         </section>
       </Layout>
     </>
