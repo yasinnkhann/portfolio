@@ -66,10 +66,15 @@ export default function Carousel() {
     <section className="w-screen flex justify-center">
       <div className="p-12 flex justify-center w-screen md:w-1/2 items-center">
         <div className="relative w-full">
-          <div className="inline-flex overflow-x-hidden snap-x scrollbar-hide">
+          <div className="inline-flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide">
+            {/* scroll-snap-type: x mandatory; in CSS */}
             {sliderControl(true)}
             {images.map((img, i) => (
-              <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
+              <div
+                className="w-full flex-shrink-0 snap-center"
+                key={img}
+                ref={refs[i]}
+              >
                 <img src={img} className="w-full object-contain" alt="" />
               </div>
             ))}
