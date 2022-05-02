@@ -4,7 +4,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Helmet } from 'react-helmet';
 import Layout from './Layout';
-import Carousel from './carousel';
+import Carousel from './Carousel';
 
 const shortcodes = { Link, navigate, Carousel };
 
