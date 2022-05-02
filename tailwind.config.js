@@ -1,4 +1,5 @@
 const tailwindScrollBarHide = require('tailwind-scrollbar-hide');
+const tailwindScrollBar = require('tailwind-scrollbar');
 
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -53,7 +54,7 @@ module.exports = {
       },
     },
   },
-  plugins: [tailwindScrollBarHide],
+  plugins: [tailwindScrollBarHide, tailwindScrollBar],
 };
 
 /*

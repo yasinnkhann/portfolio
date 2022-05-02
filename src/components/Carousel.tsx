@@ -1,4 +1,5 @@
 import React, { useState, createRef } from 'react';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function Carousel({ images }) {
   const [currImgIdx, setCurrImgIdx] = useState(0);
@@ -69,7 +70,11 @@ export default function Carousel({ images }) {
                 key={img}
                 ref={refs[i]}
               >
-                <img src={img} className="w-full object-contain" alt="" />
+                <GatsbyImage
+                  image={img}
+                  className="w-full object-contain"
+                  alt=""
+                />
               </div>
             ))}
 

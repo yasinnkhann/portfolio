@@ -8,23 +8,27 @@ import Carousel from './Carousel';
 
 const shortcodes = { Link, navigate, Carousel };
 
-export default function ProjectTemplate({ data: { mdx } }) {
+export default function ProjectTemplate({ data }) {
+  const carouselImgs = data.allFile.edges.map(
+    ({ node }) => node.childImageSharp.gatsbyImageData,
+  );
   return (
     <>
       <Helmet>
-        <title>Projects | {mdx.frontmatter.title}</title>
+        <title>Projects | {data.mdx.frontmatter.title}</title>
       </Helmet>
       <Layout>
         <section className="mt-[calc(var(--header-height-mobile)+1rem)] font-[Manrope] 2xl:mt-[calc(var(--header-height-2xl)+1rem)] 2xl:text-2xl">
-          <h1>{mdx.frontmatter.title}</h1>
+          <h1>{data.mdx.frontmatter.title}</h1>
           <div className="">
             <MDXProvider components={shortcodes}>
-              <MDXRenderer frontmatter={mdx.frontmatter}>
-                {mdx.body}
+              <MDXRenderer frontmatter={data.mdx.frontmatter}>
+                {data.mdx.body}
               </MDXRenderer>
             </MDXProvider>
           </div>
-          <a href={mdx.frontmatter.repo} target="_blank" rel="noreferrer">
+          <Carousel images={carouselImgs} />
+          <a href={data.mdx.frontmatter.repo} target="_blank" rel="noreferrer">
             Github Repo
           </a>
           <button
@@ -41,13 +45,32 @@ export default function ProjectTemplate({ data: { mdx } }) {
 }
 
 export const pageQuery = graphql`
-  query ProjectQuery($id: String) {
+  query ProjectQuery($id: String, $carouselPhotosDir: String) {
     mdx(id: { eq: $id }) {
       id
       body
+      slug
       frontmatter {
         title
         repo
+        carouselPhotosDir
+      }
+    }
+    allFile(filter: { relativeDirectory: { eq: $carouselPhotosDir } }) {
+      edges {
+        node {
+          id
+          name
+          base
+          relativePath
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              layout: CONSTRAINED
+              transformOptions: { cropFocus: CENTER, fit: COVER }
+            )
+          }
+        }
       }
     }
   }
