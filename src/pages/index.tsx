@@ -89,7 +89,7 @@ export default function Home({ data }) {
 }
 
 export const query = graphql`
-  query Banner {
+  query HomeQuery {
     coverPhoto: file(relativePath: { eq: "home/splash.png" }) {
       name
       childImageSharp {

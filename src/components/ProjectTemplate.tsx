@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import Layout from './Layout';
 import Carousel from './Carousel';
 
-const shortcodes = { Link, navigate, Carousel };
+const shortcodes = { Link, navigate };
 
 export default function ProjectTemplate({ data }) {
   const carouselImgs = data.allFile.edges.map(

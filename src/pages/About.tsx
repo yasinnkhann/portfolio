@@ -1,9 +1,10 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Helmet } from 'react-helmet';
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 
-export default function About() {
+export default function About({ data: { about } }) {
   return (
     <>
       <Helmet>
@@ -11,8 +12,8 @@ export default function About() {
       </Helmet>
       <Layout>
         <section className="mt-[calc(var(--header-height-mobile)+1rem)] mb-1 font-[Manrope] 2xl:mt-[calc(var(--header-height-2xl)+1rem)]">
-          <StaticImage
-            src="../assets/about/photo-in-rio.jpg"
+          <GatsbyImage
+            image={about.childImageSharp.gatsbyImageData}
             alt="me in rio"
             className="!float-right w-[50%] h-[50%] mx-2"
           />
@@ -44,3 +45,17 @@ export default function About() {
     </>
   );
 }
+
+export const query = graphql`
+  query AboutQuery {
+    about: file(relativePath: { eq: "about/photo-in-rio.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          placeholder: BLURRED
+          layout: CONSTRAINED
+          transformOptions: { cropFocus: CENTER, fit: COVER }
+        )
+      }
+    }
+  }
+`;
