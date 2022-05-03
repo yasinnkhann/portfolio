@@ -13,9 +13,9 @@ export default function About({ data: { about } }) {
       <Layout>
         <section className="mt-[calc(var(--header-height-mobile)+1rem)] mb-1 font-[Manrope] 2xl:mt-[calc(var(--header-height-2xl)+1rem)]">
           <GatsbyImage
+            className="!float-right w-[50%] h-[50%] mx-2 rounded-2xl"
             image={about.childImageSharp.gatsbyImageData}
             alt="me in rio"
-            className="!float-right w-[50%] h-[50%] mx-2"
           />
           <div className="mx-4 text-base sm:text-lg lg:text-xl 2xl:text-2xl">
             So you wanna know a little more about me huh? Well, allow me to

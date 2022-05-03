@@ -28,9 +28,24 @@ export default function ProjectTemplate({ data }) {
             </MDXProvider>
           </div>
           <Carousel images={carouselImgs} />
-          <a href={data.mdx.frontmatter.repo} target="_blank" rel="noreferrer">
-            Github Repo
-          </a>
+          <div>
+            <a
+              href={data.mdx.frontmatter.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Deployed Link
+            </a>
+          </div>
+          <div>
+            <a
+              href={data.mdx.frontmatter.repo}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github Repo
+            </a>
+          </div>
           <button
             onClick={() => navigate(`/projects`)}
             type="button"
@@ -52,8 +67,10 @@ export const pageQuery = graphql`
       slug
       frontmatter {
         title
+        link
         repo
         carouselPhotosDir
+        techstackDir
       }
     }
     allFile(filter: { relativeDirectory: { eq: $carouselPhotosDir } }) {

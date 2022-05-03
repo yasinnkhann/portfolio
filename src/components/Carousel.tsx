@@ -67,7 +67,8 @@ export default function Carousel({ images }) {
             {images.map((img, i) => (
               <div
                 className="w-full flex-shrink-0 snap-center"
-                key={img}
+                // eslint-disable-next-line
+                key={i}
                 ref={refs[i]}
               >
                 <GatsbyImage
@@ -84,7 +85,7 @@ export default function Carousel({ images }) {
                   className={
                     idx === currImgIdx
                       ? `h-2 w-2 bg-blue-700 rounded-full mx-2 mb-5 cursor-pointer`
-                      : `h-2 w-2 bg-white rounded-full mx-2 mb-5 cursor-pointer`
+                      : `h-2 w-2 bg-gray-400 rounded-full mx-2 mb-5 cursor-pointer`
                   }
                   aria-hidden="true"
                   // eslint-disable-next-line
