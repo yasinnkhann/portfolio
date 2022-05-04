@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const gatsby = require('gatsby-plugin-nodejs');
 
 const app = express();
+const PORT = process.env.PORT || 8001;
+
 app.use(cors({ origin: true, credentials: true }));
 app.use(cookieParser());
 
@@ -28,7 +30,5 @@ gatsby.prepare({ app }, () => {
     }
   });
 });
-
-const PORT = process.env.PORT || 8001;
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}!!!`));

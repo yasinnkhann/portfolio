@@ -49,15 +49,6 @@ export default function ProjectTemplate({ data }) {
             </a>
           </div>
 
-          {/* <div>
-            <a
-              href={data.mdx.frontmatter.repo}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Github Repo
-            </a>
-          </div> */}
           <h2 className="m-4">Tech Stack Used:</h2>
           <div className="flex flex-wrap ml-4">{mappedTechStacks}</div>
           <button
@@ -91,7 +82,10 @@ export const pageQuery = graphql`
         techStackPath
       }
     }
-    allFile(filter: { relativeDirectory: { eq: $carouselPhotosDir } }) {
+    allFile(
+      filter: { relativeDirectory: { eq: $carouselPhotosDir } }
+      sort: { order: ASC, fields: name }
+    ) {
       edges {
         node {
           id
