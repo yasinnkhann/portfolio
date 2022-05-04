@@ -34,6 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             slug
             frontmatter {
               carouselPhotosDir
+              techStackPath
             }
           }
         }
@@ -61,6 +62,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: {
         id: node.id,
         carouselPhotosDir: node.frontmatter.carouselPhotosDir,
+        techStackPath: node.frontmatter.techStackPath,
       },
     });
   });

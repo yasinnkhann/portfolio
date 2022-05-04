@@ -9,6 +9,15 @@ import Carousel from './Carousel';
 const shortcodes = { Link, navigate };
 
 export default function ProjectTemplate({ data }) {
+  const innerContent = data.file.internal.content;
+  const mappedTechStacks = JSON.parse(innerContent).techStacks.map(
+    techStackSrc => (
+      <div>
+        <img src={techStackSrc} alt="" />
+      </div>
+    ),
+  );
+  console.log(mappedTechStacks);
   const carouselImgs = data.allFile.edges.map(
     ({ node }) => node.childImageSharp.gatsbyImageData,
   );
@@ -46,6 +55,7 @@ export default function ProjectTemplate({ data }) {
               Github Repo
             </a>
           </div>
+          {mappedTechStacks}
           <button
             onClick={() => navigate(`/projects`)}
             type="button"
@@ -60,7 +70,11 @@ export default function ProjectTemplate({ data }) {
 }
 
 export const pageQuery = graphql`
-  query ProjectQuery($id: String, $carouselPhotosDir: String) {
+  query ProjectQuery(
+    $id: String
+    $carouselPhotosDir: String
+    $techStackPath: String
+  ) {
     mdx(id: { eq: $id }) {
       id
       body
@@ -70,7 +84,7 @@ export const pageQuery = graphql`
         link
         repo
         carouselPhotosDir
-        techstackDir
+        techStackPath
       }
     }
     allFile(filter: { relativeDirectory: { eq: $carouselPhotosDir } }) {
@@ -88,6 +102,14 @@ export const pageQuery = graphql`
             )
           }
         }
+      }
+    }
+    file(relativePath: { eq: $techStackPath }) {
+      id
+      name
+      base
+      internal {
+        content
       }
     }
   }
