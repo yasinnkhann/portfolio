@@ -52,9 +52,9 @@ export default function Home({ data }) {
     }
   };
 
-  useEffect(() => {
-    checkCookie();
-  }, []);
+  // useEffect(() => {
+  //   checkCookie();
+  // }, []);
 
   return (
     <>
