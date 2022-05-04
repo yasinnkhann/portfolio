@@ -11,13 +11,13 @@ const shortcodes = { Link, navigate };
 export default function ProjectTemplate({ data }) {
   const innerContent = data.file.internal.content;
   const mappedTechStacks = JSON.parse(innerContent).techStacks.map(
-    techStackSrc => (
-      <div>
+    (techStackSrc: string, idx: number) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <div key={idx}>
         <img src={techStackSrc} alt="" />
       </div>
     ),
   );
-  console.log(mappedTechStacks);
   const carouselImgs = data.allFile.edges.map(
     ({ node }) => node.childImageSharp.gatsbyImageData,
   );
@@ -55,7 +55,9 @@ export default function ProjectTemplate({ data }) {
               Github Repo
             </a>
           </div>
-          {mappedTechStacks}
+          <div className="flex flex-wrap justify-center">
+            {mappedTechStacks}
+          </div>
           <button
             onClick={() => navigate(`/projects`)}
             type="button"
