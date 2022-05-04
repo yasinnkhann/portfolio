@@ -9,7 +9,6 @@ import Carousel from './Carousel';
 const shortcodes = { Link, navigate };
 
 export default function ProjectTemplate({ data }) {
-  // const innerContent = data.file.internal.content;
   const innerContent = data.file.fields.internalContent;
   const mappedTechStacks = JSON.parse(innerContent).techStacks.map(
     (techStackSrc: string, idx: number) => (
@@ -109,9 +108,6 @@ export const pageQuery = graphql`
       id
       name
       base
-      internal {
-        content
-      }
       fields {
         internalContent
       }
