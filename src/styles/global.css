@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --header-height-mobile: 3rem;
+  --header-height-mobile: 3.5rem;
   --header-height-2xl: 5rem;
   --skill-photo-size-mobile: 5rem;
   --skill-photo-size-sm: 7rem;

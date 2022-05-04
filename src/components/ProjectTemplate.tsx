@@ -28,7 +28,16 @@ export default function ProjectTemplate({ data }) {
       </Helmet>
       <Layout>
         <section className="mt-[calc(var(--header-height-mobile)+1rem)] font-[Manrope] 2xl:mt-[calc(var(--header-height-2xl)+1rem)] 2xl:text-2xl">
-          <h1 className="m-4">{data.mdx.frontmatter.title}</h1>
+          <div className="flex justify-between">
+            <h1 className="m-4">{data.mdx.frontmatter.title}</h1>
+            <button
+              onClick={() => navigate(`/projects`)}
+              type="button"
+              className="mr-7"
+            >
+              <p className="text-blue-500 underline underline-offset-1">Back</p>
+            </button>
+          </div>
 
           <div className="m-4 text-xl">
             <MDXProvider components={shortcodes}>
@@ -51,13 +60,6 @@ export default function ProjectTemplate({ data }) {
 
           <h2 className="m-4">Tech Stack Used:</h2>
           <div className="flex flex-wrap ml-4">{mappedTechStacks}</div>
-          <button
-            onClick={() => navigate(`/projects`)}
-            type="button"
-            className="fixed top-[calc(var(--header-height-mobile)-1rem)] 2xl:top-[calc(var(--header-height-2xl)-1rem)] right-0 m-4 p-4"
-          >
-            <p className="text-blue-500 underline underline-offset-1">Back</p>
-          </button>
         </section>
       </Layout>
     </>
