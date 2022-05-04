@@ -10,6 +10,7 @@ module.exports = {
     // `gatsby-plugin-nodejs`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
