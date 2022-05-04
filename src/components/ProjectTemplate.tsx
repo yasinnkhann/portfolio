@@ -13,7 +13,7 @@ export default function ProjectTemplate({ data }) {
   const mappedTechStacks = JSON.parse(innerContent).techStacks.map(
     (techStackSrc: string, idx: number) => (
       // eslint-disable-next-line react/no-array-index-key
-      <div key={idx}>
+      <div className="p-1" key={idx}>
         <img src={techStackSrc} alt="" />
       </div>
     ),
@@ -28,16 +28,18 @@ export default function ProjectTemplate({ data }) {
       </Helmet>
       <Layout>
         <section className="mt-[calc(var(--header-height-mobile)+1rem)] font-[Manrope] 2xl:mt-[calc(var(--header-height-2xl)+1rem)] 2xl:text-2xl">
-          <h1>{data.mdx.frontmatter.title}</h1>
-          <div className="">
+          <h1 className="m-4">{data.mdx.frontmatter.title}</h1>
+
+          <div className="m-4 text-xl">
             <MDXProvider components={shortcodes}>
               <MDXRenderer frontmatter={data.mdx.frontmatter}>
                 {data.mdx.body}
               </MDXRenderer>
             </MDXProvider>
           </div>
+
           <Carousel images={carouselImgs} />
-          <div>
+          <div className="text-center m-4">
             <a
               href={data.mdx.frontmatter.link}
               target="_blank"
@@ -46,7 +48,8 @@ export default function ProjectTemplate({ data }) {
               Deployed Link
             </a>
           </div>
-          <div>
+
+          {/* <div>
             <a
               href={data.mdx.frontmatter.repo}
               target="_blank"
@@ -54,10 +57,9 @@ export default function ProjectTemplate({ data }) {
             >
               Github Repo
             </a>
-          </div>
-          <div className="flex flex-wrap justify-center">
-            {mappedTechStacks}
-          </div>
+          </div> */}
+          <h2 className="m-4">Tech Stack Used:</h2>
+          <div className="flex flex-wrap ml-4">{mappedTechStacks}</div>
           <button
             onClick={() => navigate(`/projects`)}
             type="button"

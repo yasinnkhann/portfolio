@@ -59,7 +59,7 @@ export default function Carousel({ images }) {
     // Images are placed using inline flex. We then wrap an image in a div
     // with flex-shrink-0 to stop it from 'shrinking' to fit the outer div.
     <section className="w-screen flex justify-center">
-      <div className="p-12 flex justify-center w-screen md:w-1/2 items-center">
+      <div className="px-10 pt-5 flex justify-center w-screen md:w-1/2 items-center">
         <div className="relative w-full">
           <div className="inline-flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide touch-pan-x">
             {/* scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; in CSS */}
