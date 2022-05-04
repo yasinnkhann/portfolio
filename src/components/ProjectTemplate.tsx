@@ -9,15 +9,15 @@ import Carousel from './Carousel';
 const shortcodes = { Link, navigate };
 
 export default function ProjectTemplate({ data }) {
-  const innerContent = data.file.fields.internalContent;
-  const mappedTechStacks = JSON.parse(innerContent).techStacks.map(
-    (techStackSrc: string, idx: number) => (
-      // eslint-disable-next-line react/no-array-index-key
-      <div className="p-1" key={idx}>
-        <img src={techStackSrc} alt="" />
-      </div>
-    ),
-  );
+  // const innerContent = data.file.fields.internalContent;
+  // const mappedTechStacks = JSON.parse(innerContent).techStacks.map(
+  //   (techStackSrc: string, idx: number) => (
+  //     // eslint-disable-next-line react/no-array-index-key
+  //     <div className="p-1" key={idx}>
+  //       <img src={techStackSrc} alt="" />
+  //     </div>
+  //   ),
+  // );
   const carouselImgs = data.allFile.edges.map(
     ({ node }) => node.childImageSharp.gatsbyImageData,
   );
@@ -59,7 +59,7 @@ export default function ProjectTemplate({ data }) {
           </div>
 
           <h2 className="m-4">Tech Stack Used:</h2>
-          <div className="flex flex-wrap ml-4">{mappedTechStacks}</div>
+          {/* <div className="flex flex-wrap ml-4">{mappedTechStacks}</div> */}
         </section>
       </Layout>
     </>
@@ -70,8 +70,8 @@ export const pageQuery = graphql`
   query ProjectQuery(
     $id: String
     $carouselPhotosDir: String
-    $techStackPath: String
-  ) {
+  ) # $techStackPath: String
+  {
     mdx(id: { eq: $id }) {
       id
       body
@@ -104,13 +104,13 @@ export const pageQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: $techStackPath }) {
-      id
-      name
-      base
-      fields {
-        internalContent
-      }
-    }
+    # file(relativePath: { eq: $techStackPath }) {
+    #   id
+    #   name
+    #   base
+    #   fields {
+    #     internalContent
+    #   }
+    # }
   }
 `;
