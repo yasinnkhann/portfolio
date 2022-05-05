@@ -11,8 +11,8 @@ const Carousel = loadable(() => import(`./Carousel`));
 const shortcodes = { Link, navigate };
 
 export default function ProjectTemplate({ data }) {
-  const innerContent = data.file.fields.internalContent;
-  const mappedTechStacks = JSON.parse(innerContent).techStacks.map(
+  const innerContent = data.file?.fields?.internalContent;
+  const mappedTechStacks = JSON.parse(innerContent)?.techStacks?.map(
     (techStackSrc: string, idx: number) => (
       // eslint-disable-next-line react/no-array-index-key
       <div className="p-1" key={idx}>
