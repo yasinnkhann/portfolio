@@ -53,18 +53,20 @@ export default function ProjectTemplate({ data }) {
             </a>
           </div>
 
-          <h2 className="m-4">Tech Stack Used:</h2>
           {innerContent && (
-            <div className="flex flex-wrap ml-4">
-              {JSON.parse(innerContent).techStacks.map(
-                (techStackSrc: string, idx: number) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <div className="p-1" key={idx}>
-                    <img src={techStackSrc} alt="" />
-                  </div>
-                ),
-              )}
-            </div>
+            <>
+              <h2 className="m-4">Tech Stack Used:</h2>
+              <div className="flex flex-wrap ml-4">
+                {JSON.parse(innerContent).techStacks.map(
+                  (techStackSrc: string, idx: number) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <div className="p-1" key={idx}>
+                      <img src={techStackSrc} alt="" />
+                    </div>
+                  ),
+                )}
+              </div>
+            </>
           )}
         </section>
       </Layout>
