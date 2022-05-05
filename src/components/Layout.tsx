@@ -1,5 +1,7 @@
 import React from 'react';
-import Header from './Header';
+import loadable from '@loadable/component';
+
+const Header = loadable(() => import(`./Header`));
 
 export default function Layout({ children }) {
   return (

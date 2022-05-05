@@ -1,7 +1,9 @@
 import React from 'react';
-import Layout from '@/components/Layout';
 import { Helmet } from 'react-helmet';
 import { StaticImage } from 'gatsby-plugin-image';
+import loadable from '@loadable/component';
+
+const Layout = loadable(() => import(`@/components/Layout`));
 
 export default function Contact() {
   return (

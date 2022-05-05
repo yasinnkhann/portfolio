@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import Layout from '@/components/Layout';
 import { Helmet } from 'react-helmet';
 import confetti from 'canvas-confetti';
 import axios from 'axios';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import loadable from '@loadable/component';
+
+const Layout = loadable(() => import(`@/components/Layout`));
 
 export default function Home({ data }) {
   const makeConfetti = () => {
@@ -43,7 +45,7 @@ export default function Home({ data }) {
       await axios.get(`/api/cookie`, {
         withCredentials: true,
         headers: {
-          koockie: `true`,
+          kookie: `true`,
         },
       });
     }

@@ -1,8 +1,10 @@
 import React from 'react';
-import Layout from '@/components/Layout';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
+import loadable from '@loadable/component';
 import { IEdge } from '../interfaces/IEdge';
+
+const Layout = loadable(() => import(`@/components/Layout`));
 
 export default function Skills({ data: { skills } }) {
   const multipleWordsExceptions = {

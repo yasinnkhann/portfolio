@@ -1,8 +1,10 @@
 import React from 'react';
-import Layout from '@/components/Layout';
 import { Helmet } from 'react-helmet';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
+import loadable from '@loadable/component';
+
+const Layout = loadable(() => import(`@/components/Layout`));
 
 export default function About({ data: { about } }) {
   return (

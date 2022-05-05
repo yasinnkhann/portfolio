@@ -2,18 +2,18 @@ const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  // if (stage === 'build-html' || stage === 'develop-html') {
-  //   actions.setWebpackConfig({
-  //     module: {
-  //       rules: [
-  //         {
-  //           test: /bad-module/,
-  //           use: loaders.null(),
-  //         },
-  //       ],
-  //     },
-  //   });
-  // }
+  if (stage === 'build-html' || stage === 'develop-html') {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /bad-module/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
 
   actions.setWebpackConfig({
     resolve: {

@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
-import Layout from '@/components/Layout';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import loadable from '@loadable/component';
+
+const Layout = loadable(() => import(`@/components/Layout`));
 
 export default function Projects({ data: { allMdx } }) {
   const { edges: projects } = allMdx;

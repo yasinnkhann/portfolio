@@ -3,8 +3,10 @@ import { graphql, Link, navigate } from 'gatsby';
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { Helmet } from 'react-helmet';
-import Layout from './Layout';
-import Carousel from './Carousel';
+import loadable from '@loadable/component';
+
+const Layout = loadable(() => import(`./Layout`));
+const Carousel = loadable(() => import(`./Carousel`));
 
 const shortcodes = { Link, navigate };
 
@@ -69,9 +71,8 @@ export default function ProjectTemplate({ data }) {
 export const pageQuery = graphql`
   query ProjectQuery(
     $id: String
-    $carouselPhotosDir: String
-  ) # $techStackPath: String
-  {
+    $carouselPhotosDir: String # $techStackPath: String
+  ) {
     mdx(id: { eq: $id }) {
       id
       body
