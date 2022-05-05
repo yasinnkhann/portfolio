@@ -1,19 +1,20 @@
 import React, { useState, createRef } from 'react';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import { Helmet } from 'react-helmet';
+import { GatsbyImage } from 'gatsby-plugin-image';
+import { useSwipeable } from 'react-swipeable';
 
 export default function Carousel({ images }) {
   const [currImgIdx, setCurrImgIdx] = useState(0);
 
-  const refs = images.reduce((acc, _, i) => {
-    acc[i] = createRef();
+  const refs = images.reduce((acc: any, _: any, idx: number) => {
+    acc[idx] = createRef();
     return acc;
   }, {});
 
-  const scrollToImage = (i: number) => {
-    setCurrImgIdx(i);
+  const scrollToImage = (idx: number) => {
+    setCurrImgIdx(idx);
 
-    refs[i].current.scrollIntoView({
+    refs[idx].current.scrollIntoView({
       //     Defines the transition animation.
       behavior: `smooth`,
       //      Defines vertical alignment.
@@ -60,6 +61,11 @@ export default function Carousel({ images }) {
     </button>
   );
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: nextImage,
+    onSwipedRight: previousImage,
+  });
+
   return (
     <>
       <Helmet>
@@ -73,10 +79,13 @@ export default function Carousel({ images }) {
       <section className="w-screen flex justify-center">
         <div className="px-10 pt-5 flex justify-center w-screen md:w-1/2 items-center">
           <div className="relative w-full">
-            <div className="inline-flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide touch-pan-x">
+            <div
+              {...swipeHandlers}
+              className="inline-flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide touch-pan-x"
+            >
               {/* scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; in CSS */}
               {sliderControl(true)}
-              {images.map((img, i) => (
+              {images.map((img: any, i: number) => (
                 <div
                   className="w-full flex-shrink-0 snap-center"
                   // eslint-disable-next-line
@@ -92,7 +101,7 @@ export default function Carousel({ images }) {
               ))}
 
               <div className="absolute w-full flex justify-center bottom-0">
-                {images.map((_, idx) => (
+                {images.map((_: any, idx: number) => (
                   <div
                     className={
                       idx === currImgIdx
