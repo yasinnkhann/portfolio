@@ -42,17 +42,19 @@ export default function Carousel({ images }) {
     }
   };
 
-  const arrowStyle = `absolute text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center`;
+  const arrowStyle = `absolute top-[50%] text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center`;
 
-  const sliderControl = (isLeft: boolean) => (
+  const sliderControl = (direction: string) => (
     <button
       type="button"
-      onClick={isLeft ? previousImage : nextImage}
-      className={`${arrowStyle} ${isLeft ? `left-2` : `right-2`}`}
-      style={{ top: `50%` }}
+      onClick={direction === `left` ? previousImage : nextImage}
+      className={`${arrowStyle} ${direction === `left` ? `left-2` : `right-2`}`}
     >
-      <span role="img" aria-label={`Arrow ${isLeft ? `left` : `right`}`}>
-        {isLeft ? (
+      <span
+        role="img"
+        aria-label={`Arrow ${direction === `left` ? `left` : `right`}`}
+      >
+        {direction === `left` ? (
           <i className="fa-solid fa-chevron-left" />
         ) : (
           <i className="fa-solid fa-chevron-right" />
@@ -82,9 +84,10 @@ export default function Carousel({ images }) {
             <div
               {...swipeHandlers}
               className="inline-flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide touch-pan-x"
+              // scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; in CSS
             >
-              {/* scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; in CSS */}
-              {sliderControl(true)}
+              {sliderControl(`left`)}
+              {sliderControl(`right`)}
               {images.map((img: any, i: number) => (
                 <div
                   className="w-full flex-shrink-0 snap-center"
@@ -117,7 +120,6 @@ export default function Carousel({ images }) {
                   />
                 ))}
               </div>
-              {sliderControl(false)}
             </div>
           </div>
         </div>
