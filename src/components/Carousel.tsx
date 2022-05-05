@@ -1,5 +1,6 @@
 import React, { useState, createRef } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { Helmet } from 'react-helmet';
 
 export default function Carousel({ images }) {
   const [currImgIdx, setCurrImgIdx] = useState(0);
@@ -50,56 +51,68 @@ export default function Carousel({ images }) {
       style={{ top: `50%` }}
     >
       <span role="img" aria-label={`Arrow ${isLeft ? `left` : `right`}`}>
-        {isLeft ? `◀` : `▶`}
+        {isLeft ? (
+          <i className="fa-solid fa-chevron-left" />
+        ) : (
+          <i className="fa-solid fa-chevron-right" />
+        )}
       </span>
     </button>
   );
 
   return (
-    // Images are placed using inline flex. We then wrap an image in a div
-    // with flex-shrink-0 to stop it from 'shrinking' to fit the outer div.
-    <section className="w-screen flex justify-center">
-      <div className="px-10 pt-5 flex justify-center w-screen md:w-1/2 items-center">
-        <div className="relative w-full">
-          <div className="inline-flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide touch-pan-x">
-            {/* scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; in CSS */}
-            {sliderControl(true)}
-            {images.map((img, i) => (
-              <div
-                className="w-full flex-shrink-0 snap-center"
-                // eslint-disable-next-line
-                key={i}
-                ref={refs[i]}
-              >
-                <GatsbyImage
-                  image={img}
-                  className="w-full object-contain"
-                  alt=""
-                />
-              </div>
-            ))}
+    <>
+      <Helmet>
+        <script
+          src="https://kit.fontawesome.com/5c2d069c26.js"
+          crossOrigin="anonymous"
+          defer
+        />
+      </Helmet>
 
-            <div className="absolute w-full flex justify-center bottom-0">
-              {images.map((_, idx) => (
+      <section className="w-screen flex justify-center">
+        <div className="px-10 pt-5 flex justify-center w-screen md:w-1/2 items-center">
+          <div className="relative w-full">
+            <div className="inline-flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide touch-pan-x">
+              {/* scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; in CSS */}
+              {sliderControl(true)}
+              {images.map((img, i) => (
                 <div
-                  className={
-                    idx === currImgIdx
-                      ? `h-2 w-2 bg-blue-700 rounded-full mx-2 mb-5 cursor-pointer`
-                      : `h-2 w-2 bg-gray-400 rounded-full mx-2 mb-5 cursor-pointer`
-                  }
-                  aria-hidden="true"
+                  className="w-full flex-shrink-0 snap-center"
                   // eslint-disable-next-line
-                  key={idx}
-                  onClick={() => {
-                    scrollToImage(idx);
-                  }}
-                />
+                  key={i}
+                  ref={refs[i]}
+                >
+                  <GatsbyImage
+                    image={img}
+                    className="w-full object-contain"
+                    alt=""
+                  />
+                </div>
               ))}
+
+              <div className="absolute w-full flex justify-center bottom-0">
+                {images.map((_, idx) => (
+                  <div
+                    className={
+                      idx === currImgIdx
+                        ? `h-2 w-2 bg-blue-700 rounded-full mx-2 mb-5 cursor-pointer`
+                        : `h-2 w-2 bg-gray-400 rounded-full mx-2 mb-5 cursor-pointer`
+                    }
+                    aria-hidden="true"
+                    // eslint-disable-next-line
+                    key={idx}
+                    onClick={() => {
+                      scrollToImage(idx);
+                    }}
+                  />
+                ))}
+              </div>
+              {sliderControl(false)}
             </div>
-            {sliderControl(false)}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
