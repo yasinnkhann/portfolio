@@ -7,9 +7,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
     `gatsby-plugin-mdx`,
-    // `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-gatsby-cloud`,
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {
