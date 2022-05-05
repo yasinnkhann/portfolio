@@ -35,15 +35,12 @@ export default function Home({ data }) {
   };
 
   const checkCookie = async () => {
-    const { data: cookieData } = await axios.get(
-      `http://localhost:8001/cookie`,
-      {
-        withCredentials: true,
-      },
-    );
+    const { data: cookieData } = await axios.get(`/api/cookie`, {
+      withCredentials: true,
+    });
     if (cookieData === `no-cookie`) {
       makeConfetti();
-      await axios.get(`http://localhost:8001/cookie`, {
+      await axios.get(`/api/cookie`, {
         withCredentials: true,
         headers: {
           koockie: `true`,
@@ -52,9 +49,9 @@ export default function Home({ data }) {
     }
   };
 
-  // useEffect(() => {
-  //   checkCookie();
-  // }, []);
+  useEffect(() => {
+    checkCookie();
+  }, []);
 
   return (
     <>
