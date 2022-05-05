@@ -9,27 +9,27 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-mdx`,
-    `gatsby-plugin-gatsby-cloud`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Yasin's Portfolio`,
-        short_name: `Portfolio`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/assets/meta/logo.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        workboxConfig: {
-          globPatterns: ['src/assets/meta/logo.png'],
-        },
-      },
-    },
+    // `gatsby-plugin-gatsby-cloud`,
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Yasin's Portfolio`,
+    //     short_name: `Portfolio`,
+    //     start_url: `/`,
+    //     background_color: `#663399`,
+    //     theme_color: `#663399`,
+    //     display: `minimal-ui`,
+    //     icon: `src/assets/meta/logo.png`, // This path is relative to the root of the site.
+    //   },
+    // },
+    // {
+    //   resolve: 'gatsby-plugin-offline',
+    //   options: {
+    //     workboxConfig: {
+    //       globPatterns: ['src/assets/meta/logo.png'],
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
