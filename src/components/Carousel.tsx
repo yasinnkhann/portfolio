@@ -44,7 +44,7 @@ export default function Carousel({ images }) {
 
   const arrowStyle = `absolute top-[50%] text-white text-2xl z-10 bg-black h-10 w-10 rounded-full opacity-75 flex items-center justify-center`;
 
-  const sliderControl = (direction: string) => (
+  const renderSliderControl = (direction: string) => (
     <button
       type="button"
       onClick={direction === `left` ? previousImage : nextImage}
@@ -86,8 +86,8 @@ export default function Carousel({ images }) {
               className="inline-flex overflow-x-hidden snap-x snap-mandatory scrollbar-hide touch-pan-x"
               // scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; in CSS
             >
-              {sliderControl(`left`)}
-              {sliderControl(`right`)}
+              {renderSliderControl(`left`)}
+              {renderSliderControl(`right`)}
               {images.map((img: any, i: number) => (
                 <div
                   className="w-full flex-shrink-0 snap-center"
