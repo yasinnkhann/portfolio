@@ -22,17 +22,17 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   });
 };
 
-// exports.onCreateNode = async ({ node, loadNodeContent, actions }) => {
-//   if (node.internal.type === 'File') {
-//     const { createNodeField } = actions;
-//     const content = await loadNodeContent(node);
-//     createNodeField({
-//       node,
-//       name: 'internalContent',
-//       value: content,
-//     });
-//   }
-// };
+exports.onCreateNode = async ({ node, loadNodeContent, actions }) => {
+  if (node.internal.type === 'File') {
+    const { createNodeField } = actions;
+    const content = await loadNodeContent(node);
+    createNodeField({
+      node,
+      name: 'internalContent',
+      value: content,
+    });
+  }
+};
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   // Destructure the createPage function from the actions object
