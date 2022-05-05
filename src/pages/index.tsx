@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import confetti from 'canvas-confetti';
-import axios from 'axios';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import confetti from 'canvas-confetti';
+import axios from 'axios';
 import loadable from '@loadable/component';
 
 const Layout = loadable(() => import(`@/components/Layout`));
