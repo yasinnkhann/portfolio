@@ -56,7 +56,7 @@ export default function ProjectTemplate({ data }) {
           {innerContent && (
             <>
               <h2 className="m-4">Tech Stack Used:</h2>
-              <div className="flex flex-wrap ml-4">
+              <div className="flex flex-wrap ml-4 mb-6">
                 {JSON.parse(innerContent).techStacks.map(
                   (techStackSrc: string, idx: number) => (
                     // eslint-disable-next-line react/no-array-index-key
