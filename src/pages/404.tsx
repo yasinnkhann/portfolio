@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 export default function NotFound() {
-  document.body.style.backgroundColor = `rgba(51, 204, 153, 1)`;
-  document.body.style.color = `#fff`;
-  document.body.style.fontFamily = `Open Sans, sans-serif`;
-  document.body.style.maxHeight = `700px`;
-  document.body.style.overflow = `hidden`;
+  if (document) {
+    document.body.style.backgroundColor = `rgba(51, 204, 153, 1)`;
+    document.body.style.color = `#fff`;
+    document.body.style.fontFamily = `Open Sans, sans-serif`;
+    document.body.style.maxHeight = `700px`;
+    document.body.style.overflow = `hidden`;
+  }
 
   return (
     <>
