@@ -43,6 +43,10 @@ module.exports = {
             left: 'calc(100vw - ((var(--skill-photo-size-2xl)) * 5.5))',
           },
         },
+        moveClouds: {
+          '0%': { marginLeft: '1000px' },
+          '100%': { marginLeft: '-1000px' },
+        },
       },
       animation: {
         runSM: 'runSM 15s linear infinite',
