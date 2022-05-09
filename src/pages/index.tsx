@@ -1,60 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import confetti from 'canvas-confetti';
-import axios from 'axios';
 import loadable from '@loadable/component';
 
 const Layout = loadable(() => import(`@/components/Layout`));
 
 export default function Home({ data }) {
-  const makeConfetti = () => {
-    const duration = 2 * 1000;
-    const end = Date.now() + duration;
-
-    (function frame() {
-      // launch a few confetti from the left edge
-      confetti({
-        particleCount: 7,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-      });
-      // and launch a few from the right edge
-      confetti({
-        particleCount: 7,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-      });
-
-      // keep going until we are out of time
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    })();
-  };
-
-  const checkCookie = async () => {
-    const { data: cookieData } = await axios.get(`/api/cookie`, {
-      withCredentials: true,
-    });
-    if (cookieData === `no-cookie`) {
-      makeConfetti();
-      await axios.get(`/api/cookie`, {
-        withCredentials: true,
-        headers: {
-          kookie: `true`,
-        },
-      });
-    }
-  };
-
-  // useEffect(() => {
-  //   checkCookie();
-  // }, []);
-
   return (
     <>
       <Helmet>
