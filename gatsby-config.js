@@ -37,6 +37,7 @@ module.exports = {
       options: {
         fonts: [
           'Manrope',
+          `Open Sans`,
           `sans-serif`, // you can also specify font weights and styles
         ],
         display: 'swap',
