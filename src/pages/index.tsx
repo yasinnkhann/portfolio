@@ -51,9 +51,9 @@ export default function Home({ data }) {
     }
   };
 
-  useEffect(() => {
-    checkCookie();
-  }, []);
+  // useEffect(() => {
+  //   checkCookie();
+  // }, []);
 
   return (
     <>
@@ -61,7 +61,7 @@ export default function Home({ data }) {
         <title>Home</title>
       </Helmet>
       <Layout>
-        <section className="grid grid-cols-[45%_55%] grid-rows-[40vh_50vh] sm:items-center font-[Manrope] mt-[calc(var(--header-height-mobile)+1rem)] 2xl:mt-[calc(var(--header-height-2xl)+1rem)]">
+        <section className="grid grid-cols-[45%_55%] grid-rows-[40vh_50vh] sm:items-center font-[Manrope] mt-[calc(var(--header-height-mobile)+1rem)] sm:mt-[calc(var(--header-height-2xl)+1rem)]">
           <div className="row-start-1 row-end-2 col-start-1 col-end-3 mt-4 sm:row-start-1 sm:col-end-2">
             <h1 className="text-center leading-10">
               Hello, my name is{` `}

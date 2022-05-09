@@ -5,7 +5,7 @@ export default function Header() {
   const endpoint = window.location.pathname;
 
   return (
-    <header className="fixed bg-black w-full top-0 h-[var(--header-height-mobile)] z-[999] flex items-center font-[Manrope] shadow-[1px_1px_1px_3px] 2xl:h-[var(--header-height-2xl)]">
+    <header className="fixed bg-black w-full top-0 h-[var(--header-height-mobile)] 2xl:h-[var(--header-height-2xl)] z-[999] flex items-center font-[Manrope] shadow-[1px_1px_1px_3px]">
       {typeof window !== `undefined` && (
         <nav className="w-full">
           <ul className="text-base flex justify-around 2xl:text-2xl">
