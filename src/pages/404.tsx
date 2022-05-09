@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function NotFound() {
-  if (document) {
+  if (typeof document !== `undefined`) {
     document.body.style.backgroundColor = `rgba(51, 204, 153, 1)`;
     document.body.style.color = `#fff`;
     document.body.style.fontFamily = `Open Sans, sans-serif`;
