@@ -9,12 +9,13 @@ const Layout = loadable(() => import(`@/components/Layout`));
 export default function Skills({ data: { skills } }) {
   const multipleWordsExceptions = {
     'react-testing-library': true,
+    'styled-components': true,
   };
 
   const mappedSkills = skills.edges.map((edge: IEdge) => (
     <div
       key={edge.node.id}
-      className="rounded-full bg-gray-200 m-11 p-[.5rem] w-[var(--skill-photo-size-mobile)] h-[var(--skill-photo-size-mobile)] sm:w-[var(--skill-photo-size-sm)] sm:h-[var(--skill-photo-size-sm)] md:w-[var(--skill-photo-size-md)] md:h-[var(--skill-photo-size-md)] lg:w-[var(--skill-photo-size-lg)] lg:h-[var(--skill-photo-size-lg)] xl:w-[var(--skill-photo-size-xl)] xl:h-[var(--skill-photo-size-xl)] 2xl:w-[var(--skill-photo-size-2xl)] 2xl:h-[var(--skill-photo-size-2xl)]"
+      className="rounded-full bg-gray-200 m-11 p-[.5rem] md:p-[1.2rem] w-[var(--skill-photo-size-mobile)] h-[var(--skill-photo-size-mobile)] sm:w-[var(--skill-photo-size-sm)] sm:h-[var(--skill-photo-size-sm)] md:w-[var(--skill-photo-size-md)] md:h-[var(--skill-photo-size-md)] lg:w-[var(--skill-photo-size-lg)] lg:h-[var(--skill-photo-size-lg)] xl:w-[var(--skill-photo-size-xl)] xl:h-[var(--skill-photo-size-xl)] 2xl:w-[var(--skill-photo-size-2xl)] 2xl:h-[var(--skill-photo-size-2xl)]"
     >
       <img
         className="w-full hover:animate-spin-slow"
