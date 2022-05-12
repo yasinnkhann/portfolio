@@ -10,6 +10,8 @@ export default function Skills({ data: { skills } }) {
   const multipleWordsExceptions = {
     'react-testing-library': true,
     'styled-components': true,
+    'material-ui': true,
+    'ant-design': true,
   };
 
   const mappedSkills = skills.edges.map((edge: IEdge) => (
