@@ -12,6 +12,7 @@ export default function Skills({ data: { skills } }) {
     'styled-components': true,
     'material-ui': true,
     'ant-design': true,
+    'react-router': true,
   };
 
   const mappedSkills = skills.edges.map((edge: IEdge) => (
