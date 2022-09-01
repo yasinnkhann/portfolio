@@ -10,8 +10,6 @@ export default function Header() {
         <nav className="w-full">
           <ul className="text-base flex justify-around 2xl:text-2xl">
             <li>
-              {/* eslint-disable-next-line */}
-              {/*  @ts-ignore */}
               <Link
                 to="/"
                 className={`${
@@ -22,24 +20,20 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              {/* eslint-disable-next-line */}
-              {/*  @ts-ignore */}
               <Link
                 to="/about"
                 className={`${
-                  endpoint.includes(`about`) ? `text-yellow-300` : `text-white`
+                  endpoint === `/about` ? `text-yellow-300` : `text-white`
                 } cursor-pointer`}
               >
                 About
               </Link>
             </li>
             <li>
-              {/* eslint-disable-next-line */}
-              {/*  @ts-ignore */}
               <Link
                 to="/projects"
                 className={`${
-                  endpoint.includes(`projects`)
+                  endpoint.includes(`/projects`)
                     ? `text-yellow-300`
                     : `text-white`
                 } cursor-pointer`}
@@ -48,28 +42,20 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              {/* eslint-disable-next-line */}
-              {/*  @ts-ignore */}
               <Link
                 to="/skills"
                 className={`${
-                  endpoint.includes(`/skills`)
-                    ? `text-yellow-300`
-                    : `text-white`
+                  endpoint === `/skills` ? `text-yellow-300` : `text-white`
                 } cursor-pointer`}
               >
                 Skills
               </Link>
             </li>
             <li>
-              {/* eslint-disable-next-line */}
-              {/*  @ts-ignore */}
               <Link
                 to="/contact"
                 className={`${
-                  endpoint.includes(`contact`)
-                    ? `text-yellow-300`
-                    : `text-white`
+                  endpoint === `/contact` ? `text-yellow-300` : `text-white`
                 } cursor-pointer`}
               >
                 Contact
