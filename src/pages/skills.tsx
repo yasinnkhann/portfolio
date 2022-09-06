@@ -15,13 +15,18 @@ export default function Skills({ data: { skills } }) {
     'styled-components': true,
     'material-ui': true,
     'ant-design': true,
-    'react-router': true,
+    'react-router-dom': true,
+    'tailwind-css': true,
   };
 
   const renderUpdatedSearch = () => {
     const filteredSkills = skills.edges
       .filter((edge: IEdge) =>
-        edge.node.name.toLowerCase().includes(searchQuery.toLowerCase()),
+        edge.node.name
+          .toLowerCase()
+          .split(`-`)
+          .join(` `)
+          .includes(searchQuery.toLowerCase()),
       )
       .map((edge: IEdge) => (
         <div
@@ -44,7 +49,6 @@ export default function Skills({ data: { skills } }) {
           </p>
         </div>
       ));
-    console.log(filteredSkills);
     return filteredSkills;
   };
 
