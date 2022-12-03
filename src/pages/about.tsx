@@ -20,16 +20,15 @@ export default function About({ data: { about } }) {
             alt="me in rio"
           />
           <div className="mx-4 text-base sm:text-lg lg:text-xl 2xl:text-2xl">
-            So you wanna know a little more about me huh? Well, allow me to
-            introduce myself. My name is Yasin Khan and I&apos;m a software
-            engineer based in the San Diego County. After graduating from the
-            University of California, Santa Barbara in a degree of mathematics,
-            I decided to test my luck in software development. I&apos;ve always
-            been drawn to coding because the thought of having an idea come to
-            life that could benefit the world at the same time just seemed so
-            appealing to me. So I started out how most people did, took a couple
-            of udemy courses, enrolled in the Harvard CS50 class, and just
-            learned through trial and error. After some time learning the core
+            My name is Yasin Khan and I&apos;m a software engineer based in the
+            San Diego County. After graduating from the University of
+            California, Santa Barbara in a degree of mathematics, I decided to
+            test my luck in software development. I&apos;ve always been drawn to
+            coding because the thought of having an idea come to life that could
+            benefit the world at the same time just seemed so appealing to me.
+            So I started out how most people did, took a couple of udemy
+            courses, enrolled in the Harvard CS50 class, and just learned
+            through trial and error. After some time learning the core
             fundamentals, I enrolled in a coding boot-camp known as Hack
             Reactor. During my time there, I ate, slept, and breathed coding. By
             the end of my time there, I became a fully fledged, full-stack
