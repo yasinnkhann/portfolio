@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import loadable from '@loadable/component';
 
 const Header = loadable(() => import(`./Header`));
 
-export default function Layout({ children }) {
-  return (
-    <>
-      <Header />
-      {children}
-    </>
-  );
+interface Props {
+	children?: ReactNode;
+}
+
+export default function Layout({ children }: Props) {
+	return (
+		<>
+			<Header />
+			{children}
+		</>
+	);
 }

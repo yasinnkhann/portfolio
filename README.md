@@ -1,37 +1,49 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/26466516/107675788-31f54e00-6c77-11eb-96c9-58fd8a4c69ac.png" alt="Gatsby and TypeScript">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
 </p>
+<h1 align="center">
+  Gatsby Minimal TypeScript Starter
+</h1>
 
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&style=for-the-badge&color=24B36B&labelColor=000000" alt="PRs welcome!" />
+## 🚀 Quick start
 
-  <img alt="License" src="https://img.shields.io/github/license/jpedroschmitz/gatsby-starter-ts?style=for-the-badge&color=24B36B&labelColor=000000">
-</p>
+1.  **Create a Gatsby site.**
 
-<br>
+    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
 
-A TypeScript starter for Gatsby. No plugins and styling. Exactly the necessary to start 🔥
+    ```shell
+    # create a new Gatsby site using the minimal TypeScript starter
+    npm init gatsby -- -ts
+    ```
 
-No plugins installed, great for advanced users.
+2.  **Start developing.**
 
-- 📏 **ESLint** — Pluggable JavaScript linter
-- 💖 **Prettier** - Opinionated Code Formatter
-- 🐶 **Husky** — Use git hooks with ease
-- 📄 **Commitizen** - Conventional commit messages CLI
-- 🐐 **Tests** - Jest and Testing Library
-- 🚓 **Commitlint** - Lint commit messages
-- 🖌 **Renovate** - Dependency update tool
-- 🚫 **lint-staged** - Run linters against staged git files
-- 👷 **PR Workflow** - Run Type Check & Linters on pull requests
-- 🗂 **Root import** - Import folders and files using the `@` prefix.
+    Navigate into your new site’s directory and start it up.
 
-## 🚀 Getting started
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-The best way to start with this template is using the Gatsby CLI.
+3.  **Open the code and start customizing!**
 
-> By default, this starter uses Yarn, but this choice is yours. If you'd like to switch to npm, delete the `yarn.lock` file, install the dependencies with `npm install`, and change the CI workflows, Husky Git hooks, and lint-staged steps to use npm commands.
+    Your site is now running at http://localhost:8000!
 
-1. `yarn`;
-2. `yarn start`;
+    Edit `src/pages/index.tsx` to see your site update in real-time!
 
-To view the project you can open `http://localhost:8000`.
+4.  **Learn more**
+
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+
+## 🚀 Quick start (Netlify)
+
+Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
