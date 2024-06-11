@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 export default function Header() {
+	if (typeof window === 'undefined') {
+		return <div>Window is undefined</div>;
+	}
+
 	const endpoint = window.location.pathname;
 
 	return (
