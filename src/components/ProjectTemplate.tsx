@@ -1,12 +1,10 @@
 import React from 'react';
 import { graphql, Link, navigate } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import loadable from '@loadable/component';
 import MDXContent from './MDXContent';
 import type { ProjectQuery } from 'graphql-types';
-
-const Layout = loadable(() => import(`./Layout`));
-const Carousel = loadable(() => import(`./Carousel`));
+import Layout from './Layout';
+import Carousel from './Carousel';
 
 interface Props {
 	data: ProjectQuery;

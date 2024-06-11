@@ -2,10 +2,8 @@ import React, { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import loadable from '@loadable/component';
 import { ProjectIndexQuery } from 'graphql-types';
-
-const Layout = loadable(() => import('@components/Layout'));
+import Layout from '@components/Layout';
 
 interface Props {
 	data: ProjectIndexQuery;

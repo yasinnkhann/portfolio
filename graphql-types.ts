@@ -256,6 +256,7 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
+  adapter?: Maybe<SiteAdapter>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   jsxRuntime?: Maybe<Scalars['String']>;
@@ -273,6 +274,10 @@ export type SiteBuildTimeArgs = {
   fromNow?: InputMaybe<Scalars['Boolean']>;
   difference?: InputMaybe<Scalars['String']>;
   locale?: InputMaybe<Scalars['String']>;
+};
+
+export type SiteAdapter = {
+  name?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadata = {
@@ -775,6 +780,7 @@ export type QuerySiteArgs = {
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
   port?: InputMaybe<IntQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
+  adapter?: InputMaybe<SiteAdapterFilterInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
@@ -1763,6 +1769,10 @@ export type SiteSiteMetadataFilterInput = {
   siteUrl?: InputMaybe<StringQueryOperatorInput>;
 };
 
+export type SiteAdapterFilterInput = {
+  name?: InputMaybe<StringQueryOperatorInput>;
+};
+
 export type SiteConnection = {
   totalCount: Scalars['Int'];
   edges: Array<SiteEdge>;
@@ -1813,6 +1823,7 @@ export type SiteFieldSelector = {
   siteMetadata?: InputMaybe<SiteSiteMetadataFieldSelector>;
   port?: InputMaybe<FieldSelectorEnum>;
   host?: InputMaybe<FieldSelectorEnum>;
+  adapter?: InputMaybe<SiteAdapterFieldSelector>;
   polyfill?: InputMaybe<FieldSelectorEnum>;
   pathPrefix?: InputMaybe<FieldSelectorEnum>;
   jsxRuntime?: InputMaybe<FieldSelectorEnum>;
@@ -1828,6 +1839,10 @@ export type SiteSiteMetadataFieldSelector = {
   title?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
   siteUrl?: InputMaybe<FieldSelectorEnum>;
+};
+
+export type SiteAdapterFieldSelector = {
+  name?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type SiteGroupConnection = {
@@ -1876,6 +1891,7 @@ export type SiteFilterInput = {
   siteMetadata?: InputMaybe<SiteSiteMetadataFilterInput>;
   port?: InputMaybe<IntQueryOperatorInput>;
   host?: InputMaybe<StringQueryOperatorInput>;
+  adapter?: InputMaybe<SiteAdapterFilterInput>;
   polyfill?: InputMaybe<BooleanQueryOperatorInput>;
   pathPrefix?: InputMaybe<StringQueryOperatorInput>;
   jsxRuntime?: InputMaybe<StringQueryOperatorInput>;
@@ -1892,6 +1908,7 @@ export type SiteSortInput = {
   siteMetadata?: InputMaybe<SiteSiteMetadataSortInput>;
   port?: InputMaybe<SortOrderEnum>;
   host?: InputMaybe<SortOrderEnum>;
+  adapter?: InputMaybe<SiteAdapterSortInput>;
   polyfill?: InputMaybe<SortOrderEnum>;
   pathPrefix?: InputMaybe<SortOrderEnum>;
   jsxRuntime?: InputMaybe<SortOrderEnum>;
@@ -1907,6 +1924,10 @@ export type SiteSiteMetadataSortInput = {
   title?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
   siteUrl?: InputMaybe<SortOrderEnum>;
+};
+
+export type SiteAdapterSortInput = {
+  name?: InputMaybe<SortOrderEnum>;
 };
 
 export type SiteFunctionConnection = {

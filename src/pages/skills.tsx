@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import loadable from '@loadable/component';
 import SearchBar from '../components/SearchBar';
 import { SkillsQuery } from 'graphql-types';
-
-const Layout = loadable(() => import('@components/Layout'));
+import Layout from '@components/Layout';
 
 interface Props {
 	data: SkillsQuery;

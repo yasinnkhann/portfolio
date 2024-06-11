@@ -2,10 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
-import loadable from '@loadable/component';
 import type { AboutQuery } from 'graphql-types';
-
-const Layout = loadable(() => import('@components/Layout'));
+import Layout from '@components/Layout';
 
 interface Props {
 	data: AboutQuery;
